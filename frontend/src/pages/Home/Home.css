@@ -1,0 +1,34 @@
+.home-page {
+  width: 100%;
+  position: relative;
+}
+
+/* Global Home Page Sparkles */
+.global-sparkles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.global-sparkles-container .sparkle {
+  position: absolute;
+  bottom: -20px;
+  background-color: var(--primary-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 3px rgba(200, 156, 74, 0.9), 0 0 30px 6px rgba(200, 156, 74, 0.4);
+  opacity: 0;
+  animation: floatUpSlow linear infinite;
+}
+
+@keyframes floatUpSlow {
+  0% { transform: translateY(0) scale(0.5); opacity: 0; }
+  10% { opacity: 1; transform: translateY(-10vh) scale(1.5); }
+  50% { opacity: 0.8; transform: translateY(-50vh) scale(1); }
+  90% { opacity: 1; transform: translateY(-90vh) scale(1.2); }
+  100% { transform: translateY(-110vh) scale(0.5); opacity: 0; }
+}

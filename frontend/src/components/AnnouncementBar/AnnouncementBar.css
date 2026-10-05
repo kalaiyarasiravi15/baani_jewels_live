@@ -1,0 +1,1109 @@
+/* ── Ultra-Luxury Light Champagne Silk Announcement Top Bar ── */
+.announcement-top-bar {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, #faf6ee 0%, #f4ede0 50%, #faf6ee 100%);
+  border-bottom: 1.5px solid rgba(200, 156, 74, 0.35);
+  box-shadow: 0 1px 6px rgba(1, 28, 21, 0.05);
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 101;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.announcement-bar-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Running Ticker Wrap */
+.announcement-ticker-wrap {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.announcement-track {
+  display: inline-flex;
+  align-items: center;
+  animation: tickerSlide 40s linear infinite;
+  will-change: transform;
+}
+
+.announcement-ticker-wrap:hover .announcement-track {
+  animation-play-state: paused;
+}
+
+@keyframes tickerSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.announcement-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 12px;
+  color: #011c15;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  line-height: 1;
+}
+
+.announcement-pill:hover .ann-text {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Dynamic Tag Chips ── */
+.ann-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* Deal: Vibrant Luxury Red */
+.ann-tag-chip.deal {
+  background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+  color: #ffffff;
+  border: 1px solid #ef4444;
+}
+
+/* Offer: Crimson Rose */
+.ann-tag-chip.offer {
+  background: linear-gradient(135deg, #be123c 0%, #e11d48 100%);
+  color: #ffffff;
+  border: 1px solid #fb7185;
+}
+
+/* Coupon: Emerald Green */
+.ann-tag-chip.coupon {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+  color: #a7f3d0;
+  border: 1px solid #10b981;
+}
+
+/* Luxury: Deep Royal Emerald & Gold */
+.ann-tag-chip.luxury {
+  background: #011c15;
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.7);
+}
+
+/* Artisan: Gold styling */
+.ann-tag-chip.artisan {
+  background: linear-gradient(135deg, #c89c4a 0%, #a67c2e 100%);
+  color: #ffffff;
+  border: 1px solid rgba(200, 156, 74, 0.6);
+}
+
+.ann-react-icon {
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ann-text {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #011c15;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.ann-divider {
+  margin-left: 14px;
+  color: rgba(1, 28, 21, 0.45);
+  font-size: 10px;
+}
+
+/* Right Action: Available Coupons Button */
+.announcement-right-badges {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.ann-coupons-btn {
+  background: #011c15;
+  color: #fbbf24;
+  border: 1.5px solid rgba(251, 191, 36, 0.7);
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 11.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 10px rgba(1, 28, 21, 0.35);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.ann-coupons-btn:hover {
+  background: #032e22;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(1, 28, 21, 0.5);
+  border-color: #fbbf24;
+}
+
+.ann-coupons-btn .coupon-gift-icon {
+  font-size: 14px;
+  color: #fbbf24;
+  animation: giftWiggle 3s ease-in-out infinite;
+}
+
+@keyframes giftWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-8deg) scale(1.1); }
+  75% { transform: rotate(8deg) scale(1.1); }
+}
+
+.ann-coupon-badge {
+  background: #fbbf24;
+  color: #011c15;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 10px;
+  line-height: 1.2;
+}
+
+/* ── Interactive Coupons Modal ── */
+.ann-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(1, 15, 11, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: annOverlayFade 0.2s ease-out;
+}
+
+@keyframes annOverlayFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.ann-modal-card {
+  background: #ffffff;
+  border: 1.5px solid #ece4d8;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 640px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(1, 28, 21, 0.35), 0 0 35px rgba(200, 156, 74, 0.15);
+  overflow: hidden;
+  animation: annModalPop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-sizing: border-box;
+}
+
+@keyframes annModalPop {
+  from {
+    transform: scale(0.92) translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.ann-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 28px 18px;
+  border-bottom: 1px solid #f0e8dc;
+  background: #faf7f2;
+  position: relative;
+}
+
+.ann-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(200, 156, 74, 0.12);
+  color: #9e732b;
+  border: 1px solid rgba(200, 156, 74, 0.35);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ann-modal-title-group h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #011c15;
+  letter-spacing: 0.2px;
+}
+
+.ann-modal-title-group p {
+  margin: 0;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 12.5px;
+  color: #4a5e55;
+}
+
+.ann-modal-close-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ann-modal-close-btn:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #b91c1c;
+  transform: rotate(90deg);
+}
+
+.ann-modal-body {
+  padding: 22px 28px;
+  overflow-y: auto;
+  flex: 1;
+  max-height: 52vh;
+  background: #ffffff;
+}
+
+/* Custom Gold Scrollbar */
+.ann-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.ann-modal-body::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.ann-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(200, 156, 74, 0.4);
+  border-radius: 3px;
+}
+
+.ann-coupons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ann-coupon-card {
+  background: #fdfbf7;
+  border: 1.5px dashed #c89c4a;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(1, 28, 21, 0.04);
+}
+
+.ann-coupon-card:hover {
+  background: #fffcf5;
+  border-color: #b58739;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 156, 74, 0.18);
+}
+
+.ann-coupon-card-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.ann-coupon-discount-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+  color: #ffffff;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+
+.ann-coupon-discount-tag .tag-icon {
+  font-size: 12px;
+}
+
+.ann-coupon-code-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.ann-coupon-code-pill .code-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4a5e55;
+  text-transform: uppercase;
+}
+
+.ann-coupon-code-pill .code-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fbbf24;
+  background: #011c15;
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 1px solid #c89c4a;
+  letter-spacing: 1.5px;
+}
+
+.ann-coupon-criteria {
+  font-size: 12px;
+  color: #4a5e55;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.ann-coupon-criteria .ann-expiry {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.ann-coupon-desc {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Copy Code Button */
+.ann-coupon-card-right {
+  flex-shrink: 0;
+}
+
+.ann-copy-btn {
+  background: linear-gradient(135deg, #c89c4a 0%, #a67c2e 100%);
+  color: #ffffff;
+  border: 1px solid rgba(200, 156, 74, 0.45);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(200, 156, 74, 0.25);
+  white-space: nowrap;
+}
+
+.ann-copy-btn:hover {
+  background: linear-gradient(135deg, #dfb25e 0%, #c89c4a 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(200, 156, 74, 0.4);
+}
+
+.ann-copy-btn.copied {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #ffffff;
+  border-color: #34d399;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.35);
+  transform: scale(1.02);
+}
+
+.ann-copy-btn .copy-icon {
+  font-size: 13px;
+}
+
+/* No Coupons State */
+.ann-no-coupons {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+}
+
+.ann-no-coupons .empty-sparkle-icon {
+  font-size: 38px;
+  color: #c89c4a;
+  margin-bottom: 12px;
+}
+
+.ann-no-coupons h4 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  color: #011c15;
+}
+
+.ann-no-coupons p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Modal Footer */
+.ann-modal-footer {
+  padding: 16px 28px;
+  border-top: 1px solid #f0e8dc;
+  background: #faf7f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.ann-footer-hint {
+  font-size: 12px;
+  color: #4a5e55;
+  font-weight: 500;
+}
+
+.ann-modal-shop-btn {
+  background: linear-gradient(135deg, #c89c4a 0%, #a67c2e 100%);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(200, 156, 74, 0.25);
+}
+
+.ann-modal-shop-btn:hover {
+  background: linear-gradient(135deg, #dfb25e 0%, #c89c4a 100%);
+  transform: translateX(2px);
+  box-shadow: 0 4px 14px rgba(200, 156, 74, 0.4);
+}
+
+/* Mobile Responsive (modal) */
+@media (max-width: 768px) {
+  .ann-coupons-btn span:not(.ann-coupon-badge) {
+    display: inline-block;
+  }
+  .ann-modal-card {
+    max-height: 92vh;
+    border-radius: 14px;
+  }
+  .ann-modal-header {
+    padding: 18px 20px 14px;
+  }
+  .ann-modal-body {
+    padding: 16px 20px;
+  }
+  .ann-coupon-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .ann-coupon-card-right {
+    width: 100%;
+  }
+  .ann-copy-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .ann-modal-footer {
+    flex-direction: column;
+    padding: 14px 20px;
+  }
+  .ann-modal-shop-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   EXCLUSIVE ACTIVE DEAL OF THE DAY POPUP MODAL BANNER
+   Theme: High-End Royal Emerald (#011c15) & Imperial Gold (#c89c4a / #fbbf24)
+   ══════════════════════════════════════════════════════════ */
+.ann-deal-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(1, 15, 11, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: annDealFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes annDealFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.ann-deal-popup-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(200, 156, 74, 0.45);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(200, 156, 74, 0.25);
+  position: relative;
+  overflow: hidden;
+  animation: annDealPopUp 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+@keyframes annDealPopUp {
+  from { transform: scale(0.9) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.ann-deal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(1, 28, 21, 0.08);
+  border: 1px solid rgba(1, 28, 21, 0.15);
+  color: #011c15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.ann-deal-close-btn:hover {
+  background: #b91c1c;
+  color: #ffffff;
+  border-color: #ef4444;
+  transform: rotate(90deg);
+}
+
+.ann-deal-popup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+  .ann-deal-popup-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ann-deal-popup-media {
+  background: #fdfbf7;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #f0e8dc;
+}
+
+.ann-deal-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 240px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid rgba(200, 156, 74, 0.3);
+  box-shadow: 0 10px 25px rgba(1, 28, 21, 0.1);
+  background: #ffffff;
+}
+
+.ann-deal-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ann-deal-img-wrap:hover .ann-deal-main-img {
+  transform: scale(1.06);
+}
+
+.ann-deal-flash-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 10px rgba(185, 28, 28, 0.4);
+}
+
+.ann-deal-popup-info {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ann-deal-eyebrow {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--gold-deep, #b58739);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.ann-deal-title {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--secondary-accent, #011c15);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.ann-deal-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #556960;
+  margin: 0 0 16px;
+}
+
+.ann-deal-discount-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #011c15 0%, #04382c 100%);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.6);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  width: fit-content;
+  box-shadow: 0 4px 14px rgba(1, 28, 21, 0.15);
+  margin-bottom: 16px;
+}
+
+/* Timer */
+.ann-deal-timer-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.timer-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #011c15;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.timer-boxes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.timer-box {
+  background: #f4eee2;
+  border: 1px solid #dfd2be;
+  border-radius: 6px;
+  padding: 4px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 34px;
+}
+
+.timer-val {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 13px;
+  font-weight: 800;
+  color: #011c15;
+  line-height: 1;
+}
+
+.timer-unit {
+  font-size: 8px;
+  font-weight: 700;
+  color: #b58739;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.timer-colon {
+  font-weight: 800;
+  color: #b58739;
+  font-size: 13px;
+}
+
+/* Action Buttons */
+.ann-deal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ann-deal-claim-btn {
+  background: linear-gradient(135deg, #c89c4a 0%, #b58739 100%);
+  color: #011c15;
+  border: 1px solid rgba(251, 191, 36, 0.8);
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(200, 156, 74, 0.35);
+}
+
+.ann-deal-claim-btn:hover {
+  background: linear-gradient(135deg, #dfb25e 0%, #c89c4a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(200, 156, 74, 0.5);
+}
+
+.ann-deal-dismiss-btn {
+  background: transparent;
+  border: none;
+  color: #83948c;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+  text-align: center;
+}
+
+.ann-deal-dismiss-btn:hover {
+  color: #011c15;
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS — Announcement Bar, Coupons Modal
+   & Deal Popup. Ordered largest → smallest: 1280, 1032, 991,
+   960, 768, 427, 417, 412, 375, 360
+   (The ticker bar had NO responsive rules before this block —
+   button/pill text and padding were identical from desktop
+   down to 320px. Supplements the existing 768px/640px queries
+   above, which only covered the modal and the deal-popup grid.)
+   ══════════════════════════════════════════════════════════ */
+
+/* ── ≤1280px ── */
+@media (max-width: 1280px) {
+  .announcement-bar-inner {
+    padding: 0 16px;
+  }
+}
+
+/* ── ≤1032px ── */
+@media (max-width: 1032px) {
+  .announcement-pill {
+    padding: 0 11px;
+  }
+  .ann-coupons-btn {
+    padding: 5px 12px;
+  }
+}
+
+/* ── ≤991px ── */
+@media (max-width: 991px) {
+  .announcement-bar-inner {
+    padding: 0 14px;
+    gap: 12px;
+  }
+  .ann-text {
+    font-size: 11.5px;
+  }
+}
+
+/* ── ≤960px ── */
+@media (max-width: 960px) {
+  .ann-tag-chip {
+    font-size: 9.5px;
+    padding: 3px 8px;
+  }
+}
+
+/* ── ≤768px — ticker bar compaction ── */
+@media (max-width: 768px) {
+  .announcement-bar-inner {
+    padding: 0 10px;
+    gap: 8px;
+  }
+  .announcement-ticker-wrap {
+    min-width: 0;
+    margin-right: 4px;
+    mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 20px), transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 20px), transparent);
+  }
+  .announcement-pill {
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .ann-text {
+    font-size: 11px;
+  }
+  .ann-divider {
+    margin-left: 8px;
+  }
+  .ann-coupons-btn {
+    padding: 5px 9px;
+    font-size: 10.5px;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  /* Deal popup: tighten now that grid is single column below 640,
+     and this width range still uses the 2-col layout above 640 */
+  .ann-deal-popup-info {
+    padding: 24px 22px;
+  }
+  .ann-deal-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* ── ≤600px — compact coupons pill (icon + badge) so ticker has maximum room ── */
+@media (max-width: 600px) {
+  .ann-coupons-btn span:not(.ann-coupon-badge) {
+    display: none;
+  }
+  .ann-coupons-btn {
+    padding: 5px 8px;
+    gap: 4px;
+  }
+}
+
+/* ── ≤427px — mobile refinements ── */
+@media (max-width: 427px) {
+  .announcement-bar-inner {
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .announcement-pill {
+    padding: 0 6px;
+    gap: 5px;
+  }
+  .ann-tag-chip {
+    font-size: 9px;
+    padding: 2px 7px;
+    gap: 4px;
+  }
+  .ann-react-icon {
+    font-size: 10.5px;
+  }
+  .ann-text {
+    font-size: 10.5px;
+  }
+  .ann-divider {
+    margin-left: 6px;
+  }
+  .ann-coupons-btn {
+    padding: 4px 7px;
+    gap: 3px;
+  }
+  .ann-coupons-btn span:not(.ann-coupon-badge) {
+    display: none;
+  }
+
+  /* Modal */
+  .ann-modal-title-group h3 {
+    font-size: 18px;
+  }
+  .ann-coupon-code-pill .code-text {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  .ann-coupon-card {
+    padding: 14px 14px;
+  }
+
+  /* Deal popup */
+  .ann-deal-popup-info {
+    padding: 20px 18px;
+  }
+  .ann-deal-title {
+    font-size: 1.1rem;
+  }
+  .ann-deal-desc {
+    font-size: 0.82rem;
+  }
+  .timer-box {
+    min-width: 30px;
+    padding: 3px 6px;
+  }
+}
+
+/* ── ≤417px ── */
+@media (max-width: 417px) {
+  .ann-tag-chip {
+    font-size: 8.5px;
+  }
+  .ann-deal-popup-media {
+    padding: 18px;
+  }
+  .ann-deal-img-wrap {
+    max-width: 190px;
+  }
+}
+
+/* ── ≤412px ── */
+@media (max-width: 412px) {
+  .ann-modal-header {
+    padding: 16px 16px 12px;
+  }
+  .ann-modal-body {
+    padding: 14px 16px;
+  }
+  .ann-modal-footer {
+    padding: 12px 16px;
+  }
+}
+
+/* ── ≤375px ── */
+@media (max-width: 375px) {
+  .announcement-bar-inner {
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .ann-text {
+    font-size: 10px;
+  }
+  .ann-coupon-code-pill .code-text {
+    font-size: 12px;
+    letter-spacing: 0.7px;
+  }
+  .ann-deal-title {
+    font-size: 1.02rem;
+  }
+  .ann-deal-desc {
+    font-size: 0.78rem;
+    margin-bottom: 12px;
+  }
+}
+
+/* ── ≤360px — smallest common mobile width ── */
+@media (max-width: 360px) {
+  .announcement-bar-inner {
+    padding: 0 6px;
+    gap: 5px;
+  }
+  .ann-tag-chip {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+  .ann-text {
+    font-size: 9.5px;
+  }
+  .ann-coupons-btn {
+    padding: 4px 7px;
+  }
+  .ann-modal-title-group h3 {
+    font-size: 16.5px;
+  }
+  .ann-deal-popup-info {
+    padding: 16px 14px;
+  }
+  .ann-deal-title {
+    font-size: 0.95rem;
+  }
+  .ann-deal-claim-btn {
+    padding: 10px 16px;
+    font-size: 12.5px;
+  }
+  .timer-box {
+    min-width: 27px;
+    padding: 3px 5px;
+  }
+  .timer-val {
+    font-size: 12px;
+  }
+}

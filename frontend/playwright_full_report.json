@@ -1,0 +1,252 @@
+{
+  "total": 35,
+  "passed": 35,
+  "failed": 0,
+  "tests": [
+    {
+      "module": "Storefront Home",
+      "name": "Page Loaded with Brand Title",
+      "passed": true,
+      "details": "Baani Jewels - Luxury Made Affordable",
+      "timestamp": "2026-09-25T09:29:57.332Z"
+    },
+    {
+      "module": "Storefront Banner",
+      "name": "Homepage Hero Banner & Promotional Slider Rendered",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:29:57.390Z"
+    },
+    {
+      "module": "Storefront Shop",
+      "name": "Live Product Catalog Grid Rendered",
+      "passed": true,
+      "details": "12 products listed",
+      "timestamp": "2026-09-25T09:29:58.518Z"
+    },
+    {
+      "module": "Storefront Collections",
+      "name": "Collections Showcase Page Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:00.200Z"
+    },
+    {
+      "module": "Storefront PDP",
+      "name": "Product Details Loaded",
+      "passed": true,
+      "details": "Gold lookalike mens kaapu",
+      "timestamp": "2026-09-25T09:30:00.870Z"
+    },
+    {
+      "module": "Storefront Cart",
+      "name": "Add to Cart Triggered Successfully",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:02.248Z"
+    },
+    {
+      "module": "Storefront Cart",
+      "name": "Cart View & Totals Rendered",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:03.749Z"
+    },
+    {
+      "module": "Storefront TrackOrder",
+      "name": "Track Order Loaded with Clean UI (No # Symbol)",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:04.624Z"
+    },
+    {
+      "module": "Storefront Account",
+      "name": "Account & Auth Portal Rendered",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:05.638Z"
+    },
+    {
+      "module": "Storefront Auth",
+      "name": "Forgot Password Reset Flow Active",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:06.521Z"
+    },
+    {
+      "module": "Storefront About",
+      "name": "About Us Page Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:08.859Z"
+    },
+    {
+      "module": "Storefront Contact",
+      "name": "Contact Us Form Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:09.885Z"
+    },
+    {
+      "module": "Admin Auth",
+      "name": "Admin Login Authenticated Successfully",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:12.747Z"
+    },
+    {
+      "module": "Admin Dashboard",
+      "name": "Dashboard Analytics Overview Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:13.072Z"
+    },
+    {
+      "module": "Admin Orders",
+      "name": "Pill Indicator Shows \"Total Orders: N\" (Not Just Icon/Qty)",
+      "passed": true,
+      "details": "Total Orders: 0",
+      "timestamp": "2026-09-25T09:30:13.545Z"
+    },
+    {
+      "module": "Admin Orders",
+      "name": "Order ID in Table Has No # Symbol",
+      "passed": true,
+      "details": "Sample ID: ORD-AUDIT-1790309567044",
+      "timestamp": "2026-09-25T09:30:13.609Z"
+    },
+    {
+      "module": "Admin Customers",
+      "name": "Customer Database Loaded",
+      "passed": true,
+      "details": "1 customers",
+      "timestamp": "2026-09-25T09:30:14.052Z"
+    },
+    {
+      "module": "Admin Customers",
+      "name": "Customer Modal Has 3 Stat Cards & CANCELLED Card is REMOVED",
+      "passed": true,
+      "details": "Total Orders, Delivered, Total Spend present; Cancelled removed",
+      "timestamp": "2026-09-25T09:30:14.958Z"
+    },
+    {
+      "module": "Admin Products",
+      "name": "Product Catalog & Table Loaded",
+      "passed": true,
+      "details": "1 items",
+      "timestamp": "2026-09-25T09:30:15.870Z"
+    },
+    {
+      "module": "Admin Categories",
+      "name": "Category Management Module Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:16.279Z"
+    },
+    {
+      "module": "Admin Collections",
+      "name": "Home Collections Management Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:16.764Z"
+    },
+    {
+      "module": "Admin Deals",
+      "name": "Deal of the Day Module Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:17.040Z"
+    },
+    {
+      "module": "Admin Offer Banners",
+      "name": "Offer Banner Management Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:17.306Z"
+    },
+    {
+      "module": "Admin Banners",
+      "name": "Homepage Hero Banner Management Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:17.809Z"
+    },
+    {
+      "module": "Admin Coupons",
+      "name": "Coupons Management Table Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:18.028Z"
+    },
+    {
+      "module": "Admin Shipping Zones",
+      "name": "Shipping Zones & Rules Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:18.455Z"
+    },
+    {
+      "module": "Admin Stock",
+      "name": "Stock Management Table Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:18.911Z"
+    },
+    {
+      "module": "Admin Reviews",
+      "name": "Reviews Moderation Module Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:19.398Z"
+    },
+    {
+      "module": "Admin Testimonials",
+      "name": "Testimonials Management Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:19.649Z"
+    },
+    {
+      "module": "Admin Inbox",
+      "name": "Contact Inquiries Inbox Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:19.923Z"
+    },
+    {
+      "module": "Admin About Settings",
+      "name": "About Page Content Settings Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:20.345Z"
+    },
+    {
+      "module": "Admin Contact Settings",
+      "name": "Contact Page Content Settings Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:20.751Z"
+    },
+    {
+      "module": "Admin Settings",
+      "name": "General Store Settings Loaded",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:21.008Z"
+    },
+    {
+      "module": "Admin Reports",
+      "name": "Financial Reports Loaded with No # Symbol in Orders or Ranks",
+      "passed": true,
+      "details": "",
+      "timestamp": "2026-09-25T09:30:21.889Z"
+    },
+    {
+      "module": "Order Integrity",
+      "name": "Track Order Renders Order Reference Cleanly Without # Symbol",
+      "passed": true,
+      "details": "Order ID: ORD-VERIFY-1790328622014",
+      "timestamp": "2026-09-25T09:30:23.448Z"
+    }
+  ]
+}

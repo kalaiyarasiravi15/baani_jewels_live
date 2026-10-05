@@ -1,0 +1,263 @@
+/* BAANI JEWELS — LUXURY POLICY PAGES STYLING */
+.policy-page {
+  background: var(--surface, #faf7f2);
+  color: var(--ink, #06231b);
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 70px;
+}
+
+.policy-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 5% 0;
+  box-sizing: border-box;
+}
+
+.policy-card {
+  background: #fdfbf7;
+  border: 1px solid rgba(200, 156, 74, 0.28);
+  border-radius: 20px;
+  padding: 44px 40px;
+  box-shadow: 0 16px 45px rgba(1, 28, 21, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.policy-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-accent, #c89c4a), #fbbf24);
+}
+
+.policy-header {
+  margin-bottom: 32px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(200, 156, 74, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.policy-eyebrow {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.76rem;
+  letter-spacing: 3px;
+  color: var(--primary-accent, #c89c4a);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.policy-title {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  color: var(--secondary-accent, #011c15);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.policy-last-updated {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: #718096;
+  font-style: italic;
+}
+
+.policy-section {
+  margin-bottom: 30px;
+}
+
+.policy-section-title {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.22rem;
+  color: var(--secondary-accent, #011c15);
+  margin-bottom: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.policy-section-title .section-icon {
+  color: var(--gold-deep, #b58739);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.policy-text {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.94rem;
+  line-height: 1.8;
+  color: var(--ink-muted, #4a5e55);
+  margin-bottom: 14px;
+}
+
+.policy-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.policy-list li {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: var(--ink-muted, #4a5e55);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.policy-list li .bullet-icon {
+  color: var(--primary-accent, #c89c4a);
+  font-size: 0.9rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.policy-highlight-box {
+  background: linear-gradient(135deg, rgba(200, 156, 74, 0.12) 0%, rgba(200, 156, 74, 0.04) 100%);
+  border-left: 3px solid var(--primary-accent, #c89c4a);
+  padding: 16px 20px;
+  border-radius: 0 12px 12px 0;
+  margin: 20px 0;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--secondary-accent, #011c15);
+}
+
+.policy-contact-box {
+  background: linear-gradient(135deg, #011c15 0%, #032b20 100%);
+  border-radius: 16px;
+  padding: 28px 30px;
+  color: #ffffff;
+  margin-top: 36px;
+  border: 1px solid rgba(200, 156, 74, 0.35);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.policy-contact-text h4 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.policy-contact-text p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #e2e8f0;
+}
+
+.policy-contact-btn {
+  background: linear-gradient(135deg, #c89c4a 0%, #b58739 100%);
+  color: #011c15;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(200, 156, 74, 0.35);
+  white-space: nowrap;
+}
+
+.policy-contact-btn:hover {
+  background: linear-gradient(135deg, #dfb25e 0%, #c89c4a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(200, 156, 74, 0.5);
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE — tuned to: 1280, 1032, 991, 960, 768,
+   427, 417, 412, 375, 360px
+   ══════════════════════════════════════════════════════════ */
+
+/* 1280 — standard laptop window: trim outer gutters slightly */
+@media (max-width: 1280px) {
+  .policy-container { padding: 44px 4% 0; }
+}
+
+/* 1032 — this is a single-column page throughout, so the card itself
+   just gets a touch less internal padding as the window narrows */
+@media (max-width: 1032px) {
+  .policy-card { padding: 40px 34px; }
+}
+
+/* 991 — tablets in portrait */
+@media (max-width: 991px) {
+  .policy-container { padding: 38px 5% 0; }
+  .policy-card { padding: 36px 28px; }
+}
+
+/* 960 — small tablets / large phones landscape */
+@media (max-width: 960px) {
+  .policy-section-title { font-size: 1.15rem; }
+}
+
+/* 768 — tablets / large phones */
+@media (max-width: 768px) {
+  .policy-container { padding: 30px 5% 0; }
+  .policy-card { padding: 30px 20px; }
+  .policy-contact-box { flex-direction: column; align-items: flex-start; padding: 24px 22px; }
+  .policy-contact-btn { width: 100%; justify-content: center; }
+}
+
+/* 427 — larger Android/iPhone phones */
+@media (max-width: 427px) {
+  .policy-container { padding: 24px 4.5% 0; }
+  .policy-card { padding: 26px 18px; border-radius: 16px; }
+  .policy-header { margin-bottom: 24px; padding-bottom: 16px; }
+  .policy-section-title { font-size: 1.05rem; gap: 8px; }
+  .policy-text, .policy-list li { font-size: 0.89rem; }
+}
+
+/* 417 — mid-range phones (iPhone 6/7/8 Plus and similar) */
+@media (max-width: 417px) {
+  .policy-eyebrow { font-size: 0.68rem; letter-spacing: 2px; }
+  .policy-highlight-box { padding: 14px 16px; font-size: 0.88rem; }
+  .policy-contact-text h4 { font-size: 1.05rem; }
+}
+
+/* 412 — common Android width (Pixel, Galaxy) */
+@media (max-width: 412px) {
+  .policy-card { padding: 22px 16px; }
+  .policy-section { margin-bottom: 24px; }
+  .policy-list { gap: 8px; }
+}
+
+/* 375 — iPhone SE / standard iPhone width */
+@media (max-width: 375px) {
+  .policy-container { padding: 20px 4% 0; }
+  .policy-section-title { font-size: 1rem; }
+  .policy-text, .policy-list li { font-size: 0.86rem; line-height: 1.65; }
+  .policy-contact-box { padding: 20px 18px; gap: 14px; }
+  .policy-contact-text p { font-size: 0.84rem; }
+}
+
+/* 360 — narrowest common Android width */
+@media (max-width: 360px) {
+  .policy-card { padding: 18px 14px; }
+  .policy-section-title { font-size: 0.95rem; }
+  .policy-section-title .section-icon { font-size: 1rem; }
+  .policy-last-updated { font-size: 0.78rem; }
+  .policy-contact-btn { padding: 9px 18px; font-size: 0.85rem; }
+}

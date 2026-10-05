@@ -1,0 +1,300 @@
+.page-banner {
+  min-height: 380px;
+  padding-top: calc(var(--navbar-height, 140px) + 36px);
+  padding-bottom: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(135deg, rgba(3, 35, 26, 0.78) 0%, rgba(2, 22, 16, 0.88) 100%), var(--page-banner-image) center 30% / cover no-repeat;
+  border-bottom: 2px solid rgba(201, 168, 76, 0.4);
+  box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.35), inset 0 -20px 40px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.page-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(201, 168, 76, 0.12) 0%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.page-banner-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  padding: 0 24px;
+}
+
+.page-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.page-banner-badge .badge-gem {
+  color: #f3d88b;
+  font-size: 11px;
+}
+
+.page-banner-badge .badge-text {
+  color: #f3d88b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.page-banner-title {
+  margin: 0 0 14px;
+  color: #fff9ee;
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+}
+
+.page-banner-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.page-banner-breadcrumbs .breadcrumb-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.page-banner-breadcrumbs .breadcrumb-link:hover {
+  color: #f3d88b;
+  text-decoration: underline;
+}
+
+.page-banner-breadcrumbs .breadcrumb-sep {
+  color: rgba(201, 168, 76, 0.6);
+}
+
+.page-banner-breadcrumbs .breadcrumb-current {
+  color: #c9a84c;
+  font-weight: 700;
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS — PageBanner
+   Ordered largest → smallest: 1280, 1032, 991, 960, 768,
+   427, 417, 412, 375, 360
+   ══════════════════════════════════════════════════════════ */
+
+/* ── ≤1280px — Large Laptops ── */
+@media (max-width: 1280px) {
+  .page-banner {
+    min-height: 340px;
+    padding-top: calc(var(--navbar-height, 140px) + 28px);
+    padding-bottom: 48px;
+  }
+  .page-banner-title {
+    font-size: 2.8rem;
+  }
+}
+
+/* ── ≤1032px — Small Laptops / Large Tablets Landscape ── */
+@media (max-width: 1032px) {
+  .page-banner {
+    min-height: 310px;
+    padding-top: calc(var(--navbar-height, 140px) + 24px);
+    padding-bottom: 42px;
+  }
+  .page-banner-title {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+  }
+  .page-banner-breadcrumbs {
+    font-size: 0.84rem;
+  }
+}
+
+/* ── ≤991px — Tablet Landscape ── */
+@media (max-width: 991px) {
+  .page-banner {
+    min-height: 290px;
+    padding-top: calc(var(--navbar-height, 122px) + 24px);
+    padding-bottom: 38px;
+  }
+  .page-banner-title {
+    font-size: 2.2rem;
+  }
+  .page-banner-breadcrumbs {
+    font-size: 0.82rem;
+  }
+}
+
+/* ── ≤960px — Small Tablet Landscape ── */
+@media (max-width: 960px) {
+  .page-banner {
+    min-height: 275px;
+    padding-top: calc(var(--navbar-height, 122px) + 22px);
+    padding-bottom: 36px;
+  }
+  .page-banner-title {
+    font-size: 2.05rem;
+  }
+}
+
+/* ── ≤768px — Tablet Portrait / Mobile ── */
+@media (max-width: 768px) {
+  .page-banner {
+    min-height: 240px;
+    padding-top: calc(var(--navbar-height, 122px) + 24px);
+    padding-bottom: 30px;
+  }
+  
+  .page-banner-title {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  
+  .page-banner-badge {
+    padding: 3px 10px;
+    margin-bottom: 8px;
+  }
+  
+  .page-banner-badge .badge-text {
+    font-size: 9.5px;
+    letter-spacing: 2px;
+  }
+  
+  .page-banner-breadcrumbs {
+    font-size: 0.78rem;
+    letter-spacing: 1.2px;
+  }
+}
+
+/* ── ≤600px — Modern Mobile ── */
+@media (max-width: 600px) {
+  .page-banner {
+    min-height: 220px;
+    padding-top: calc(var(--navbar-height, 104px) + 24px);
+    padding-bottom: 26px;
+  }
+}
+
+/* ── ≤427px — Standard Mobile ── */
+@media (max-width: 427px) {
+  .page-banner {
+    min-height: 210px;
+    padding-top: calc(var(--navbar-height, 104px) + 22px);
+    padding-bottom: 24px;
+  }
+  .page-banner-content {
+    padding: 0 16px;
+  }
+  .page-banner-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+  }
+  .page-banner-badge {
+    padding: 2.5px 9px;
+    margin-bottom: 6px;
+  }
+  .page-banner-badge .badge-text {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+  .page-banner-breadcrumbs {
+    font-size: 0.74rem;
+    letter-spacing: 1px;
+    gap: 6px;
+  }
+}
+
+/* ── ≤417px — Small Mobile ── */
+@media (max-width: 417px) {
+  .page-banner {
+    min-height: 205px;
+    padding-top: calc(var(--navbar-height, 104px) + 20px);
+  }
+  .page-banner-title {
+    font-size: 1.45rem;
+  }
+}
+
+/* ── ≤412px — Common Android Mobile ── */
+@media (max-width: 412px) {
+  .page-banner {
+    min-height: 200px;
+    padding-top: calc(var(--navbar-height, 104px) + 20px);
+  }
+  .page-banner-title {
+    font-size: 1.42rem;
+  }
+}
+
+/* ── ≤375px — iPhone SE ── */
+@media (max-width: 375px) {
+  .page-banner {
+    min-height: 190px;
+    padding-top: calc(var(--navbar-height, 104px) + 18px);
+    padding-bottom: 20px;
+  }
+  .page-banner-content {
+    padding: 0 12px;
+  }
+  .page-banner-title {
+    font-size: 1.3rem;
+    letter-spacing: 0.6px;
+  }
+  .page-banner-breadcrumbs {
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+    gap: 5px;
+  }
+}
+
+/* ── ≤360px — Smallest Supported Phones ── */
+@media (max-width: 360px) {
+  .page-banner {
+    min-height: 180px;
+    padding-top: calc(var(--navbar-height, 104px) + 16px);
+    padding-bottom: 18px;
+  }
+  .page-banner-content {
+    padding: 0 10px;
+  }
+  .page-banner-title {
+    font-size: 1.22rem;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+  }
+  .page-banner-badge .badge-text {
+    font-size: 8.5px;
+    letter-spacing: 1px;
+  }
+  .page-banner-breadcrumbs {
+    font-size: 0.68rem;
+    letter-spacing: 0.6px;
+  }
+}
+
+

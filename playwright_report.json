@@ -1,0 +1,20 @@
+{
+  "customerWebsite": [
+    {
+      "testName": "Homepage Load & Title Verification",
+      "passed": true,
+      "details": "Title: Baani Jewels - Luxury Made Affordable"
+    },
+    {
+      "testName": "Shop Page Products Grid Rendered",
+      "passed": false,
+      "details": "Count: 0"
+    }
+  ],
+  "adminPortal": [],
+  "responsiveChecks": [],
+  "summary": {
+    "passed": 1,
+    "failed": 1
+  }
+}

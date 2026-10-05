@@ -1,0 +1,339 @@
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 6%;
+  background-color: #fffaf6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle leaf shadow effect on the left */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 400px;
+  height: 100%;
+  background-image: url('../../assets/leaf_bg.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  opacity: 0.15;
+  filter: blur(4px); /* Creates a shadow effect */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-content {
+  flex: 1.1;
+  padding-right: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-subtitle {
+  font-family: var(--font-poppins);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.about-title {
+  font-family: var(--font-poppins);
+  font-size: 34px;
+  color: var(--secondary-accent);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+.about-description {
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--gold-deep); /* Use the new gold color for the paragraph */
+  margin-bottom: 20px;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-poppins);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--secondary-accent);
+  transition: transform 0.25s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(4px);
+}
+
+.feature-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(200, 156, 74, 0.12);
+  color: var(--primary-accent);
+  font-size: 19px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(200, 156, 74, 0.25);
+}
+
+.feature-item:hover .feature-icon-wrapper {
+  background: var(--primary-accent);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(200, 156, 74, 0.35);
+}
+
+.feature-text {
+  line-height: 1.35;
+}
+
+.about-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--secondary-accent);
+  color: var(--text-dark);
+  border: none;
+  padding: 16px 32px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: var(--primary-accent);
+  color: var(--bg-left);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.about-btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* Images Right Side */
+.about-images-wrapper {
+  flex: 0.9;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.about-images {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+}
+
+.main-arch-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 400px 0 0 400px; /* Curve on the left side */
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.arch-border {
+  display: none; /* Removed as per the new design */
+}
+
+.small-circle-img-wrapper {
+  position: absolute;
+  bottom: -20px;
+  left: -100px; /* Overlap the curve */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 15px solid var(--surface);
+  z-index: 3;
+  overflow: hidden;
+  box-shadow: -10px 15px 30px rgba(0,0,0,0.1);
+}
+
+.small-circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations (Explicit 10-Breakpoint Standard)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1280px) {
+  .about-section {
+    padding: 90px 5%;
+  }
+  .about-title {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 1032px) {
+  .about-section {
+    padding: 80px 4%;
+  }
+  .about-content {
+    padding-right: 30px;
+  }
+  .about-title {
+    font-size: 40px;
+  }
+  .small-circle-img-wrapper {
+    width: 180px;
+    height: 180px;
+    left: -15%;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-section {
+    flex-direction: column;
+    gap: 50px;
+    padding: 60px 5%;
+  }
+  .about-content {
+    padding-right: 0;
+    text-align: center;
+  }
+  .about-features {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 36px;
+  }
+  .about-btn {
+    margin: 0 auto;
+  }
+  .about-images-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 960px) {
+  .about-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 4%;
+    gap: 40px;
+  }
+  .about-title {
+    font-size: 34px;
+  }
+  .about-description {
+    font-size: 13.5px;
+  }
+  .small-circle-img-wrapper {
+    width: 150px;
+    height: 150px;
+    left: -10%;
+  }
+}
+
+@media (max-width: 427px) {
+  .about-section {
+    padding: 40px 4%;
+  }
+  .about-title {
+    font-size: 28px;
+  }
+  .about-subtitle {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  .about-description {
+    font-size: 13px;
+  }
+  .about-features {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+  .small-circle-img-wrapper {
+    width: 120px;
+    height: 120px;
+    left: -5%;
+    bottom: -10px;
+  }
+  .about-btn {
+    padding: 11px 24px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 417px) {
+  .about-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 412px) {
+  .about-title {
+    font-size: 25px;
+  }
+  .about-description {
+    font-size: 12.8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-title {
+    font-size: 23px;
+  }
+  .about-description {
+    font-size: 12.5px;
+  }
+  .small-circle-img-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-title {
+    font-size: 21px;
+  }
+  .about-description {
+    font-size: 12px;
+  }
+  .about-btn {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+}

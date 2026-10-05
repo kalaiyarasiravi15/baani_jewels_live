@@ -1,0 +1,107 @@
+{
+  "customerWebsite": [
+    {
+      "testName": "Homepage Load & Title Verification",
+      "passed": true,
+      "details": "Title: Baani Jewels - Luxury Made Affordable"
+    },
+    {
+      "testName": "Header Logo Visibility",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Shop Page Products Grid Rendered",
+      "passed": true,
+      "details": "Count: 12"
+    },
+    {
+      "testName": "Product Details Page Loaded",
+      "passed": true,
+      "details": "Title: Festive stone bangles"
+    },
+    {
+      "testName": "PDP Back Button Visibility",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Add to Cart & Toastify Notification",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Wishlist Toggle Interactivity",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Track Order Page Stepper Component Loaded",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "adminPortal": [
+    {
+      "testName": "Admin Authenticated Session Access",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Order Management Module & 6-Stage Stepper View",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Category Management Module",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Home Collections Management Module",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Manage Deals of the Day Module",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Manage Offer Banners Module",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Coupons Module & Datetime Input Verification",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Reports & Top Customers Sorted by Order Count",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "responsiveChecks": [
+    {
+      "testName": "Mobile Bottom Nav Hidden on Desktop (1280px)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Mobile Bottom Nav Displayed on Mobile (375px)",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "testName": "Mobile Hamburger Icon Rendered on Mobile",
+      "passed": true,
+      "details": ""
+    }
+  ],
+  "summary": {
+    "passed": 19,
+    "failed": 0
+  }
+}

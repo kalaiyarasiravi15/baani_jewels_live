@@ -1,0 +1,25 @@
+<svg width="300" height="500" viewBox="0 0 300 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main stem -->
+  <path d="M150 500 Q180 250 150 0" stroke="#e8d8c8" stroke-width="2"/>
+  
+  <!-- Right Leaves -->
+  <path d="M152 400 C 220 350, 270 420, 280 450 C 230 460, 170 430, 152 400" stroke="#e8d8c8" stroke-width="2"/>
+  <path d="M155 300 C 240 240, 290 320, 300 350 C 240 370, 180 330, 155 300" stroke="#e8d8c8" stroke-width="2"/>
+  <path d="M158 200 C 250 130, 290 220, 290 250 C 240 270, 190 230, 158 200" stroke="#e8d8c8" stroke-width="2"/>
+  <path d="M156 100 C 230 40, 260 130, 260 160 C 210 170, 170 130, 156 100" stroke="#e8d8c8" stroke-width="2"/>
+  
+  <!-- Left Leaves -->
+  <path d="M148 450 C 80 400, 30 470, 20 500 C 70 510, 130 480, 148 450" stroke="#e8d8c8" stroke-width="2"/>
+  <path d="M145 350 C 60 290, 10 370, 0 400 C 60 420, 120 380, 145 350" stroke="#e8d8c8" stroke-width="2"/>
+  <path d="M142 250 C 50 180, 10 270, 10 300 C 60 320, 110 280, 142 250" stroke="#e8d8c8" stroke-width="2"/>
+  <path d="M144 150 C 70 90, 40 180, 40 210 C 90 220, 130 180, 144 150" stroke="#e8d8c8" stroke-width="2"/>
+  <path d="M148 50 C 90 0, 70 80, 70 110 C 110 120, 140 80, 148 50" stroke="#e8d8c8" stroke-width="2"/>
+  
+  <!-- Inner veins (optional for more detail) -->
+  <path d="M152 400 Q 200 410 280 450" stroke="#e8d8c8" stroke-width="1"/>
+  <path d="M155 300 Q 210 320 300 350" stroke="#e8d8c8" stroke-width="1"/>
+  <path d="M158 200 Q 210 230 290 250" stroke="#e8d8c8" stroke-width="1"/>
+  <path d="M148 450 Q 100 460 20 500" stroke="#e8d8c8" stroke-width="1"/>
+  <path d="M145 350 Q 90 370 0 400" stroke="#e8d8c8" stroke-width="1"/>
+  <path d="M142 250 Q 90 280 10 300" stroke="#e8d8c8" stroke-width="1"/>
+</svg>

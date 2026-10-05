@@ -1,0 +1,1072 @@
+/* ══════════════════════════════════════════════════════════
+   BAANI JEWELS — ULTRA-LUXURY UNIQUE ABOUT PAGE STYLING
+   Theme: Royal Emerald (#011c15), Champagne Silk (#faf7f2 / #fdfbf7),
+          Metallic Gold (#c89c4a / #fbbf24)
+   ══════════════════════════════════════════════════════════ */
+
+.about-page {
+  background: var(--surface, #faf7f2);
+  color: var(--ink, #06231b);
+  width: 100%;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.about-page .container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+
+/* ──────────────────────────────────────────────────────────
+   1. EDITORIAL HERO SECTION
+   ────────────────────────────────────────────────────────── */
+.about-editorial {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 30px;
+}
+
+.editorial-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-eyebrow {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.78rem;
+  color: var(--primary-accent, #c89c4a);
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-eyebrow::before {
+  content: '✦';
+  font-size: 0.85rem;
+  color: var(--primary-accent, #c89c4a);
+}
+
+.editorial-title {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  color: var(--secondary-accent, #011c15);
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 22px;
+  letter-spacing: -0.3px;
+}
+
+.editorial-title em {
+  display: inline-block;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-deep, #b58739);
+  margin-top: 4px;
+}
+
+.editorial-content-box {
+  padding-left: 24px;
+  border-left: 3px solid var(--primary-accent, #c89c4a);
+  position: relative;
+}
+
+.editorial-lead-para {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--secondary-accent, #011c15);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.editorial-line {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-accent, #c89c4a), transparent);
+  margin-bottom: 16px;
+}
+
+.editorial-body {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: var(--ink-muted, #4a5e55);
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+/* Hero Banner Frame */
+.editorial-hero-banner-frame {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(1, 28, 21, 0.12);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  background: #fdfbf7;
+  padding: 10px;
+  border: 1px solid rgba(200, 156, 74, 0.28);
+}
+
+.editorial-hero-banner-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 65px rgba(1, 28, 21, 0.18), 0 0 25px rgba(200, 156, 74, 0.15);
+  border-color: rgba(200, 156, 74, 0.5);
+}
+
+.about-main-banner-img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.editorial-badge {
+  position: absolute;
+  bottom: -22px;
+  right: -22px;
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #011c15 0%, #04382c 50%, #c89c4a 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(1, 28, 21, 0.45);
+  animation: floatAtelierBadge 4s ease-in-out infinite;
+  z-index: 5;
+  border: 2.5px solid rgba(251, 191, 36, 0.85);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.editorial-badge-number {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fbbf24;
+  letter-spacing: 0.5px;
+}
+
+.editorial-badge-label {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.62rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  color: #ffffff;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+@keyframes floatAtelierBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ──────────────────────────────────────────────────────────
+   2. BRAND PHILOSOPHY (ROYAL EMERALD JEWEL BOX)
+   ────────────────────────────────────────────────────────── */
+.about-belief {
+  padding: 40px 0 50px;
+}
+
+.belief-box {
+  background: linear-gradient(135deg, #011c15 0%, #032b20 50%, #01140e 100%);
+  border: 1px solid rgba(200, 156, 74, 0.4);
+  border-radius: 24px;
+  padding: 48px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(1, 28, 21, 0.35), 0 0 40px rgba(200, 156, 74, 0.12);
+}
+
+.belief-box::before {
+  content: '“';
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  font-family: var(--font-serif, serif);
+  font-size: 150px;
+  line-height: 1;
+  color: rgba(200, 156, 74, 0.08);
+  pointer-events: none;
+  user-select: none;
+}
+
+.belief-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.belief-tag {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.76rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fbbf24;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.belief-title {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+.belief-divider {
+  width: 54px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c89c4a, transparent);
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.belief-quote {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  font-style: italic;
+  color: #f3ece0;
+  max-width: 860px;
+  margin: 0 auto 24px;
+  line-height: 1.7;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.belief-signature {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.88rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fbbf24;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+/* ──────────────────────────────────────────────────────────
+   3. WHY BAANI JEWELS? (CRAFTSMANSHIP GRID)
+   ────────────────────────────────────────────────────────── */
+.why-baani-section {
+  padding: 50px 0 60px;
+}
+
+.about-gallery-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.about-gallery-header h2 {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  color: var(--secondary-accent, #011c15);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 4px;
+}
+
+.section-subtitle-text {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.98rem;
+  color: var(--ink-muted, #4a5e55);
+  max-width: 620px;
+  margin: 12px auto 0;
+  line-height: 1.65;
+}
+
+.why-baani-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.why-card {
+  background: #fdfbf7;
+  border: 1px solid rgba(200, 156, 74, 0.22);
+  border-radius: 18px;
+  padding: 36px 30px;
+  text-align: left;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(1, 28, 21, 0.04);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-accent, #c89c4a), #fbbf24);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(1, 28, 21, 0.1), 0 0 20px rgba(200, 156, 74, 0.12);
+  border-color: rgba(200, 156, 74, 0.5);
+  background: #ffffff;
+}
+
+.why-card:hover::before {
+  opacity: 1;
+}
+
+.why-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(200, 156, 74, 0.15) 0%, rgba(200, 156, 74, 0.05) 100%);
+  color: var(--gold-deep, #b58739);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  border: 1px solid rgba(200, 156, 74, 0.3);
+  transition: all 0.35s ease;
+}
+
+.why-card:hover .why-icon-wrapper {
+  background: linear-gradient(135deg, var(--secondary-accent, #011c15), #063b2e);
+  color: #fbbf24;
+  border-color: #fbbf24;
+  transform: scale(1.08) rotate(6deg);
+  box-shadow: 0 8px 20px rgba(1, 28, 21, 0.25);
+}
+
+.why-title {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.25rem;
+  color: var(--secondary-accent, #011c15);
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.why-desc {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--ink-muted, #4a5e55);
+}
+
+/* ──────────────────────────────────────────────────────────
+   4. OUR JOURNEY SECTION
+   ────────────────────────────────────────────────────────── */
+.about-journey-section {
+  padding: 40px 0 60px;
+}
+
+.journey-card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+  background: #fdfbf7;
+  border: 1px solid rgba(200, 156, 74, 0.25);
+  border-radius: 22px;
+  padding: 48px;
+  box-shadow: 0 16px 45px rgba(1, 28, 21, 0.06);
+}
+
+.journey-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.journey-heading {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  color: var(--secondary-accent, #011c15);
+  line-height: 1.25;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.journey-body {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--ink-muted, #4a5e55);
+  margin-bottom: 26px;
+}
+
+.journey-brand-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, rgba(200, 156, 74, 0.12) 0%, rgba(200, 156, 74, 0.04) 100%);
+  border-left: 3px solid var(--primary-accent, #c89c4a);
+  padding: 12px 20px;
+  border-radius: 0 10px 10px 0;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--secondary-accent, #011c15);
+}
+
+.journey-brand-highlight .sparkle-icon {
+  color: var(--gold-deep, #b58739);
+  font-size: 1.1rem;
+}
+
+.journey-image-wrapper {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(1, 28, 21, 0.14);
+  border: 1px solid rgba(200, 156, 74, 0.3);
+  background: #011c15;
+}
+
+.journey-feature-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.journey-image-wrapper:hover .journey-feature-img {
+  transform: scale(1.05);
+}
+
+/* ──────────────────────────────────────────────────────────
+   5. CURATED ARTISTRY GALLERY (LIVE PRODUCTS)
+   ────────────────────────────────────────────────────────── */
+.about-gallery {
+  padding: 40px 0 60px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(1, 28, 21, 0.06);
+  border: 1px solid rgba(200, 156, 74, 0.2);
+  background: #fdfbf7;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(1, 28, 21, 0.2) 0%, rgba(1, 28, 21, 0.85) 100%);
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay-content {
+  color: #ffffff;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(1, 28, 21, 0.9);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(251, 191, 36, 0.6);
+  transform: translateY(12px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item:hover .gallery-overlay-content {
+  transform: translateY(0);
+}
+
+/* ──────────────────────────────────────────────────────────
+   6. CLOSING CALL TO ACTION
+   ────────────────────────────────────────────────────────── */
+.about-cta {
+  padding: 30px 0 70px;
+}
+
+.cta-box {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #011c15 0%, #032b20 50%, #01140e 100%);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(200, 156, 74, 0.4);
+  box-shadow: 0 25px 60px rgba(1, 28, 21, 0.4), 0 0 35px rgba(200, 156, 74, 0.15);
+}
+
+.cta-box::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(200, 156, 74, 0.25), transparent 70%);
+  top: -100px;
+  right: -100px;
+  animation: pulseAtelierGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseAtelierGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.cta-box .about-eyebrow {
+  color: #fbbf24;
+}
+
+.cta-box h2 {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  color: #ffffff;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+}
+
+.cta-text {
+  font-family: var(--font-poppins, sans-serif);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  background: linear-gradient(135deg, #c89c4a 0%, #b58739 100%);
+  color: #011c15;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 22px rgba(200, 156, 74, 0.4);
+  border: 1px solid rgba(251, 191, 36, 0.7);
+}
+
+.cta-btn:hover {
+  background: linear-gradient(135deg, #dfb25e 0%, #c89c4a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(200, 156, 74, 0.55);
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   Ordered largest → smallest: 1280, 1032, 991, 960, 768,
+   427, 417, 412, 375, 360
+   ══════════════════════════════════════════════════════════ */
+
+/* ── ≤1280px — slightly tighten the widescreen layout ── */
+@media (max-width: 1280px) {
+  .about-page .container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .about-editorial {
+    gap: 32px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 18px;
+  }
+}
+
+/* ── ≤1032px — narrow the editorial hero, ease grid gaps ── */
+@media (max-width: 1032px) {
+  .about-editorial {
+    grid-template-columns: 1fr 0.9fr;
+    gap: 28px;
+  }
+
+  .why-baani-grid {
+    gap: 22px;
+  }
+
+  .journey-card {
+    gap: 36px;
+    padding: 40px;
+  }
+
+  .editorial-hero-banner-frame {
+    max-width: 460px;
+  }
+}
+
+/* ── ≤991px — stack the hero, drop why-cards to 2 columns ── */
+@media (max-width: 991px) {
+  .about-editorial {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 34px;
+  }
+
+  .editorial-right {
+    order: -1;
+  }
+
+  .editorial-hero-banner-frame {
+    max-width: 460px;
+  }
+
+  .why-baani-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .journey-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 36px;
+  }
+
+  .journey-image-wrapper {
+    order: -1;
+  }
+
+  .journey-feature-img {
+    height: 320px;
+  }
+}
+
+/* ── ≤960px — belief box + CTA breathing room ── */
+@media (max-width: 960px) {
+  .belief-box {
+    padding: 40px 28px;
+  }
+
+  .cta-box {
+    padding: 50px 32px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  }
+}
+
+/* ── ≤768px — tablet / large-phone rework ── */
+@media (max-width: 768px) {
+  .about-page .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about-editorial {
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+
+  .editorial-content-box {
+    padding-left: 18px;
+  }
+
+  .editorial-hero-banner-frame {
+    max-width: 100%;
+  }
+
+  .editorial-badge {
+    width: 96px;
+    height: 96px;
+    bottom: -16px;
+    right: -10px;
+  }
+
+  .belief-box {
+    padding: 32px 22px;
+    border-radius: 18px;
+  }
+
+  .belief-quote {
+    font-size: 1.1rem;
+  }
+
+  .why-baani-section {
+    padding: 40px 0 44px;
+  }
+
+  .why-baani-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .why-card {
+    padding: 28px 22px;
+  }
+
+  .about-journey-section {
+    padding: 30px 0 44px;
+  }
+
+  .journey-card {
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+
+  .journey-feature-img {
+    height: 260px;
+  }
+
+  .about-gallery {
+    padding: 30px 0 44px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .about-cta {
+    padding: 24px 0 54px;
+  }
+
+  .cta-box {
+    padding: 40px 24px;
+    border-radius: 18px;
+  }
+}
+
+/* ── ≤427px — small phones ── */
+@media (max-width: 427px) {
+  .about-page .container {
+    padding-left: 4.5%;
+    padding-right: 4.5%;
+  }
+
+  .editorial-title {
+    font-size: 1.65rem;
+  }
+
+  .editorial-lead-para {
+    font-size: 1rem;
+  }
+
+  .editorial-body {
+    font-size: 0.9rem;
+  }
+
+  .editorial-badge {
+    width: 82px;
+    height: 82px;
+    bottom: -12px;
+    right: -6px;
+    padding: 6px;
+  }
+
+  .editorial-badge-number {
+    font-size: 1.05rem;
+  }
+
+  .editorial-badge-label {
+    font-size: 0.5rem;
+  }
+
+  .belief-title {
+    font-size: 1.5rem;
+  }
+
+  .belief-quote {
+    font-size: 1rem;
+  }
+
+  .about-gallery-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle-text {
+    font-size: 0.88rem;
+  }
+
+  .why-baani-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .why-card {
+    padding: 24px 20px;
+  }
+
+  .journey-heading {
+    font-size: 1.5rem;
+  }
+
+  .journey-body {
+    font-size: 0.9rem;
+  }
+
+  .journey-feature-img {
+    height: 220px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .cta-box h2 {
+    font-size: 1.55rem;
+  }
+
+  .cta-text {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    padding: 12px 26px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ── ≤417px ── */
+@media (max-width: 417px) {
+  .editorial-title {
+    font-size: 1.55rem;
+  }
+
+  .editorial-content-box {
+    padding-left: 14px;
+  }
+
+  .belief-box {
+    padding: 28px 18px;
+  }
+
+  .why-card {
+    padding: 22px 18px;
+  }
+
+  .journey-card {
+    padding: 22px 16px;
+  }
+}
+
+/* ── ≤412px ── */
+@media (max-width: 412px) {
+  .about-page .container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .editorial-hero-banner-frame {
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  .about-main-banner-img {
+    border-radius: 12px;
+  }
+
+  .gallery-grid {
+    gap: 8px;
+  }
+
+  .cta-box {
+    padding: 34px 18px;
+  }
+}
+
+/* ── ≤375px ── */
+@media (max-width: 375px) {
+  .editorial-title {
+    font-size: 1.42rem;
+  }
+
+  .editorial-lead-para {
+    font-size: 0.95rem;
+  }
+
+  .about-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
+  }
+
+  .belief-title {
+    font-size: 1.35rem;
+  }
+
+  .belief-quote {
+    font-size: 0.94rem;
+  }
+
+  .about-gallery-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .why-title {
+    font-size: 1.1rem;
+  }
+
+  .why-desc {
+    font-size: 0.88rem;
+  }
+
+  .journey-heading {
+    font-size: 1.35rem;
+  }
+
+  .journey-brand-highlight {
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+
+  .cta-box h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ── ≤360px — smallest supported phones ── */
+@media (max-width: 360px) {
+  .about-page .container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .editorial-title {
+    font-size: 1.32rem;
+  }
+
+  .editorial-badge {
+    width: 74px;
+    height: 74px;
+    bottom: -10px;
+    right: -4px;
+  }
+
+  .editorial-badge-number {
+    font-size: 0.95rem;
+  }
+
+  .editorial-badge-label {
+    font-size: 0.46rem;
+  }
+
+  .belief-box {
+    padding: 24px 14px;
+  }
+
+  .belief-quote {
+    font-size: 0.88rem;
+  }
+
+  .why-baani-grid {
+    gap: 12px;
+  }
+
+  .why-card {
+    padding: 20px 16px;
+  }
+
+  .why-icon-wrapper {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .journey-card {
+    padding: 18px 14px;
+  }
+
+  .journey-feature-img {
+    height: 190px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .cta-box {
+    padding: 28px 14px;
+  }
+
+  .cta-box h2 {
+    font-size: 1.28rem;
+  }
+
+  .cta-btn {
+    padding: 11px 22px;
+    font-size: 0.8rem;
+  }
+}

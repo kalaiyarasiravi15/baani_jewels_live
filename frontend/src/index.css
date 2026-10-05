@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  --primary-accent: #c89c4a; /* realistic metallic gold */
+  --gold-deep: #b58739; /* slightly deeper gold */
+  --secondary-accent: #011c15; /* Baani royal emerald */
+  --text-dark: #fff5df; /* champagne text used on dark surfaces */
+  --text-light: #d8bd83;
+  --ink: #06231b; /* primary deep emerald ink text on light surfaces */
+  --ink-muted: #4a5e55;
+  --surface: #faf7f2; /* warm luxury champagne silk surface */
+  --surface-alt: #f3ece0;
+  --bg-left: #011c15;
+  --bg-right: #02231b;
+  --navbar-height: 140px;
+  --topbar-height: 0px;
+
+  /* Standardized Typography Theme */
+  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-cinzel: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-cormorant: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-jost: 'Jost', 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background: var(--surface);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Consistent Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+p, span, div, a, label, li, dt, dd, th, td {
+  font-family: var(--font-poppins);
+}
+
+input, select, textarea, button, optgroup {
+  font-family: var(--font-poppins);
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-poppins);
+}
+
+/* Shared mobile safeguards. Individual page styling remains in each page stylesheet. */
+@media (max-width: 900px) {
+  :root { --navbar-height: 122px; } /* 40px AnnouncementBar + 82px Navbar */
+  body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+  img, video, canvas, svg { max-width: 100%; }
+  input, select, textarea, button { max-width: 100%; }
+  table { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  :root { --navbar-height: 104px; } /* 40px AnnouncementBar + 64px Navbar */
+  body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+  h1 { font-size: clamp(1.65rem, 7vw, 2.2rem); }
+  h2 { font-size: clamp(1.35rem, 6vw, 1.8rem); }
+}
+
+/* ══════════════════════════════════════════════════════════
+   UNIVERSAL LUXURY COMPACT PRODUCT CARD (.bb-card)
+   Standardized Across Home, Shop, Collections, Wishlist, PDP
+══════════════════════════════════════════════════════════ */
+.bb-card {
+  background: #ffffff;
+  border: 1px solid #ece5dc;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 230px;
+  margin: 0 auto;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.bb-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-accent, #c89c4a);
+  box-shadow: 0 8px 20px rgba(6, 59, 46, 0.09);
+}
+
+/* Media Box */
+.bb-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f7f5f0;
+  cursor: pointer;
+}
+
+.bb-piece-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), filter 0.45s ease;
+}
+
+.bb-media:hover .bb-piece-img {
+  transform: scale(1.06);
+  filter: brightness(0.88);
+}
+
+.bb-no-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-accent, #c89c4a);
+  font-size: 20px;
+  background: #f7f5f0;
+}
+
+/* Badges */
+.bb-discount-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 4;
+  background: #c53030;
+  color: #ffffff;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(197, 48, 48, 0.25);
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.bb-stock-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 4;
+  background: rgba(18, 56, 46, 0.94);
+  color: #fff5df;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  pointer-events: none;
+  border: 1px solid rgba(200, 156, 74, 0.35);
+}
+
+.bb-discount-badge + .bb-stock-badge {
+  top: 28px;
+}
+
+/* Wishlist Button */
+.bb-wish-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 5;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border: 1px solid #e5dfd6;
+  color: var(--ink-muted, #53685f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.bb-wish-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  transition: transform 0.25s ease;
+}
+
+.bb-wish-btn:hover {
+  border-color: #e54b4b;
+  color: #e54b4b;
+  transform: scale(1.1);
+}
+
+.bb-wish-btn.active {
+  background: #fdeaea !important;
+  border-color: #e53935 !important;
+  color: #e53935 !important;
+  box-shadow: 0 2px 8px rgba(229, 57, 53, 0.25) !important;
+}
+
+.bb-wish-btn.active svg {
+  fill: #e53935 !important;
+  stroke: #e53935 !important;
+}
+
+/* Hover Overlay & View Details */
+.bb-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 59, 46, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.bb-media:hover .bb-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bb-view-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transform: translateY(4px);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.2s ease;
+  padding: 0;
+}
+
+.bb-media:hover .bb-view-btn {
+  transform: translateY(0);
+}
+
+.bb-ring {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 59, 46, 0.8);
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+}
+
+.bb-ring svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.8;
+}
+
+.bb-view-btn:hover .bb-ring {
+  background: var(--primary-accent, #c89c4a);
+  border-color: var(--primary-accent, #c89c4a);
+  transform: scale(1.08);
+}
+
+/* Card Body */
+.bb-body {
+  padding: 8px 8px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.bb-mat {
+  margin: 0 0 2px;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 9.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold-deep, #b58739);
+}
+
+.bb-name {
+  margin: 0 0 4px;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--secondary-accent, #063b2e);
+  transition: color 0.2s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.bb-card:hover .bb-name {
+  color: var(--primary-accent, #c89c4a);
+}
+
+/* Price Row */
+.bb-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  margin-top: auto;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.bb-price {
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gold-deep, #b58739);
+  letter-spacing: -0.2px;
+}
+
+.bb-old-price {
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 11.5px;
+  color: var(--ink-muted, #53685f);
+  text-decoration: line-through;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+/* Card Footer */
+.bb-footer {
+  padding: 0 8px 8px;
+}
+
+.bb-add-btn {
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1.2px solid var(--secondary-accent, #063b2e);
+  color: var(--secondary-accent, #063b2e);
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bb-add-btn:hover {
+  background: var(--secondary-accent, #063b2e);
+  color: #ffffff;
+  border-color: var(--secondary-accent, #063b2e);
+  box-shadow: 0 3px 10px rgba(6, 59, 46, 0.15);
+}
+
+.bb-add-btn.added {
+  background: #eef4f0;
+  border-color: #558b6e;
+  color: #2b6144;
+}
+
+.bb-add-btn.added:hover {
+  background: #2b6144;
+  color: #ffffff;
+}
+
+.bb-add-btn.preorder {
+  background: #fffdf5;
+  border-color: var(--primary-accent, #c89c4a);
+  color: var(--gold-deep, #b58739);
+  font-weight: 700;
+}
+
+.bb-add-btn.preorder:hover {
+  background: var(--primary-accent, #c89c4a);
+  color: #ffffff;
+  border-color: var(--primary-accent, #c89c4a);
+  box-shadow: 0 4px 14px rgba(200, 156, 74, 0.35);
+}

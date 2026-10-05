@@ -1,0 +1,428 @@
+/* =====================================================
+   BAANI JEWELS ADMIN DASHBOARD — GLOBAL OVERRIDES
+   Ensures every page, button, badge, input is visible
+   ===================================================== */
+
+/* 1. Global button visibility */
+button,
+.btn,
+[class*="-btn"],
+[class*="btn-"] {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Primary action buttons — always visible */
+.btn-primary,
+.add-btn,
+.save-btn,
+.submit-btn,
+.action-btn,
+.szp-btn-add,
+.upload-btn,
+.apply-btn,
+.export-btn {
+  background: #011c15 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover,
+.add-btn:hover,
+.save-btn:hover,
+.submit-btn:hover,
+.action-btn:hover,
+.szp-btn-add:hover,
+.upload-btn:hover,
+.apply-btn:hover,
+.export-btn:hover {
+  background: #c89c4a !important;
+  color: #011c15 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(200, 156, 74, 0.35);
+}
+
+/* Edit buttons */
+.edit-btn,
+.szp-btn-edit,
+.update-btn,
+[class*="edit"],
+.coupon-edit-btn {
+  background: #c89c4a !important;
+  color: #011c15 !important;
+  border: none !important;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover,
+.szp-btn-edit:hover,
+.coupon-edit-btn:hover {
+  background: #a07830 !important;
+  color: #fff !important;
+}
+
+/* Delete / Danger buttons */
+.delete-btn,
+.szp-btn-delete,
+.remove-btn,
+.danger-btn,
+.coupon-delete-btn {
+  background: #dc2626 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover,
+.szp-btn-delete:hover,
+.coupon-delete-btn:hover {
+  background: #b91c1c !important;
+}
+
+/* Save / Confirm in shipping zones */
+.szp-btn-save {
+  background: #011c15 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.szp-btn-save:hover { background: #c89c4a !important; color: #011c15 !important; }
+
+/* Cancel button */
+.szp-btn-cancel,
+.cancel-btn {
+  background: #e5e7eb !important;
+  color: #374151 !important;
+  border: none !important;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* 2. Table headers — always visible */
+table thead th,
+.dash-stat-table th {
+  background: #011c15 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border-right: 1px solid rgba(255,255,255,0.1) !important;
+  border-bottom: none !important;
+}
+
+table thead th:first-child { border-radius: 8px 0 0 0; }
+table thead th:last-child  { border-radius: 0 8px 0 0; border-right: none !important; }
+
+/* 3. Table body rows */
+table tbody td {
+  color: #1a2e25 !important;
+  font-size: 13px;
+  padding: 11px 16px;
+}
+
+table tbody tr:hover {
+  background: rgba(200, 156, 74, 0.06) !important;
+}
+
+/* 4. Status / Order badges */
+.badge-pending    { background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; }
+.badge-confirmed  { background: #d1fae5; color: #065f46; border: 1px solid #34d399; }
+.badge-shipped    { background: #dbeafe; color: #1e40af; border: 1px solid #60a5fa; }
+.badge-delivered  { background: #d1fae5; color: #065f46; border: 1px solid #34d399; }
+.badge-cancelled  { background: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+.badge-out        { background: #ede9fe; color: #5b21b6; border: 1px solid #a78bfa; }
+
+/* 5. Inputs and form controls */
+input[type="text"]:not(.nav-search-input):not(.bj-login-input):not(.login-field-input),
+input[type="number"]:not(.nav-search-input):not(.bj-login-input):not(.login-field-input),
+input[type="email"]:not(.nav-search-input):not(.bj-login-input):not(.login-field-input),
+input[type="tel"]:not(.nav-search-input):not(.bj-login-input):not(.login-field-input),
+input[type="date"]:not(.nav-search-input):not(.bj-login-input):not(.login-field-input),
+input[type="search"]:not(.nav-search-input):not(.bj-login-input):not(.login-field-input),
+input[type="password"]:not(.nav-search-input):not(.bj-login-input):not(.login-field-input),
+textarea:not(.bj-login-input):not(.login-field-input),
+select:not(.bj-login-input):not(.login-field-input) {
+  border: 1.5px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 10px 14px; /* default padding for plain inputs (no !important so specific paddings win) */
+  font-size: 14px !important;
+  color: #1a2e25 !important;
+  background: #fff !important;
+  font-family: 'Poppins', sans-serif !important;
+  outline: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+input:not(.bj-login-input):not(.login-field-input):focus,
+textarea:not(.bj-login-input):not(.login-field-input):focus,
+select:not(.bj-login-input):not(.login-field-input):focus {
+  border-color: #011c15 !important;
+  box-shadow: 0 0 0 3px rgba(1, 28, 21, 0.08) !important;
+}
+
+/* 5b. Search inputs & search icons across all admin panels — prevent text & icon overlap */
+.cp-search-box,
+.pp-search-box,
+.search-box,
+.search-bar-curved,
+.ars-rvw-search-bar,
+.inbox-search,
+.rpt-search-wrap,
+.ars-tst-search-box,
+[class*="search-box"],
+[class*="search-bar"],
+[class*="search-wrap"] {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Search inputs: 42px left padding guarantees NO overlap with the search icon */
+div.cp-search-box input,
+div.pp-search-box input,
+div.search-box input,
+div.search-bar-curved input,
+div.ars-rvw-search-bar input,
+div.inbox-search input,
+div.rpt-search-wrap input,
+div.ars-tst-search-box input,
+.ars-tst-search,
+div[class*="search-box"] input,
+div[class*="search-bar"] input,
+div[class*="search-wrap"] input,
+input[placeholder*="Search"],
+input[placeholder*="search"],
+input[placeholder*="Search" i],
+input[placeholder*="search" i],
+input[type="search"] {
+  padding-left: 42px !important;
+  padding-right: 36px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 13.5px !important;
+  border: 1.5px solid #d1d5db !important;
+  border-radius: 8px !important;
+  background: #ffffff !important;
+  color: #1a2e25 !important;
+  outline: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+/* Search icons: vertically centered at left: 14px */
+.cp-search-icon,
+.pp-search-icon,
+.search-icon,
+.ars-rvw-search-icon,
+.inbox-search-icon,
+.search-bar-curved svg,
+.inbox-search svg:not(.cp-search-clear),
+.cp-search-box svg:not(.cp-search-clear),
+.pp-search-box svg:not(.cp-search-clear),
+.search-box svg:not(.cp-search-clear),
+.rpt-search-wrap svg:not(.cp-search-clear),
+.ars-rvw-search-bar svg:not(.cp-search-clear),
+.ars-tst-search-box svg:not(.cp-search-clear),
+[class*="search-box"] > svg:first-child,
+[class*="search-bar"] > svg:first-child,
+[class*="search-wrap"] > svg:first-child,
+.cp-search-box .cp-search-icon,
+.pp-search-box .pp-search-icon,
+[class*="search-icon"] {
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
+  color: #868686 !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
+/* 5c. Order & Status Filter Dropdowns — prevent icon & text collision */
+div.order-filter-dropdown-wrap {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+div.order-filter-dropdown-wrap .filter-icon,
+.order-filter-dropdown-wrap .filter-icon {
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 15px !important;
+  color: #011c15 !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+
+select.order-filter-select,
+.order-filter-select,
+div.order-filter-dropdown-wrap select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  padding: 10px 36px 10px 40px !important;
+  border: 1.5px solid #d1d5db !important;
+  border-radius: 8px !important;
+  background-color: #ffffff !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #011c15 !important;
+  outline: none !important;
+  cursor: pointer !important;
+  min-width: 180px !important;
+  transition: border-color 0.18s, box-shadow 0.18s !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%23555' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+}
+
+select.order-filter-select:hover,
+.order-filter-select:hover {
+  border-color: #9ca3af !important;
+}
+
+select.order-filter-select:focus,
+.order-filter-select:focus {
+  border-color: #011c15 !important;
+  box-shadow: 0 0 0 3px rgba(1, 28, 21, 0.08) !important;
+}
+
+
+/* 6. Cards / sections */
+.glass-card,
+.szp-card,
+.product-card,
+.s-card,
+.dash-stat-modal-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* 7. Section headings */
+.page-title,
+.section-title,
+h1, h2, h3, h4 {
+  color: #011c15;
+}
+
+/* 8. Pagination buttons */
+.page-btn,
+.pagination-btn,
+[class*="page-btn"] {
+  border: 1.5px solid #d1d5db !important;
+  color: #011c15 !important;
+  background: #fff !important;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-btn:hover,
+.pagination-btn:hover {
+  background: #011c15 !important;
+  color: #fff !important;
+  border-color: #011c15 !important;
+}
+
+.page-btn.active,
+.pagination-btn.active {
+  background: #011c15 !important;
+  color: #fff !important;
+  border-color: #011c15 !important;
+}
+
+/* 9. Toggle / Tab buttons */
+.tab-btn,
+.filter-btn,
+.szp-tab {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+  border: 1.5px solid #e5e7eb !important;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.active,
+.filter-btn.active,
+.szp-tab.active {
+  background: #011c15 !important;
+  color: #fff !important;
+  border-color: #011c15 !important;
+}
+
+.tab-btn:hover,
+.filter-btn:hover,
+.szp-tab:hover {
+  background: #011c15 !important;
+  color: #fff !important;
+}
+
+/* 10. Dashboard stats card – active link color */
+.view-all-link {
+  color: #c89c4a !important;
+  font-weight: 700;
+}
+
+.view-all-link:hover {
+  color: #011c15 !important;
+  text-decoration: underline;
+}
+
+/* 11. Sidebar active item fix */
+.nav-item.active {
+  background: linear-gradient(90deg, rgba(1, 28, 21, 0.08) 0%, transparent 100%) !important;
+  border-left: 3px solid #c89c4a !important;
+  color: #011c15 !important;
+  font-weight: 700 !important;
+}
+
+.nav-item.active svg { color: #c89c4a !important; }
+
+/* 12. Select dropdowns visible */
+select option {
+  color: #1a2e25 !important;
+  background: #fff !important;
+}

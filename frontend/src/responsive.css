@@ -1,0 +1,13 @@
+/* Storefront-only responsive guardrails. These retain each page's existing design and flow. */
+.app { width: 100%; overflow-x: clip; }
+
+@media (max-width: 1280px) { :where(.container, .checkout-page .container) { max-width: 1180px; } }
+@media (max-width: 1032px) { :where(.container, .checkout-page .container) { padding-inline: 4%; } :where(.checkout-layout, .about-editorial, .contact-main-grid) { gap: 24px; } }
+@media (max-width: 991px) { :where(.checkout-layout, .about-editorial, .contact-main-grid, .product-details-layout) { grid-template-columns: 1fr; } :where(.checkout-summary-section) { position: static; } }
+@media (max-width: 960px) { :where(.container, .checkout-page .container) { padding-inline: 28px; } :where(.page-banner, .contact-page, .about-page, .shop-page, .collections-page) { overflow-x: clip; } }
+@media (max-width: 768px) { :where(.container, .checkout-page .container) { padding-inline: 20px; } :where(.checkout-layout, .about-editorial, .contact-main-grid, .product-details-layout) { gap: 20px; } :where(.checkout-form-section, .checkout-summary-section) { border-radius: 12px; } :where(.table-responsive, .cp-table-scroll, .ars-table-wrap) { overflow-x: auto; -webkit-overflow-scrolling: touch; } }
+@media (max-width: 427px) { :where(.container, .checkout-page .container) { padding-inline: 16px; } :where(.checkout-form-section, .checkout-summary-section) { padding: 20px 16px; } }
+@media (max-width: 417px) { :where(.form-row, .addr-row-2) { grid-template-columns: 1fr; gap: 0; } }
+@media (max-width: 412px) { :where(.checkout-items) { max-height: 240px; } :where(.coupon-input-group) { flex-wrap: wrap; } :where(.coupon-input, .btn-apply-coupon) { min-height: 42px; } }
+@media (max-width: 375px) { :where(.container, .checkout-page .container) { padding-inline: 14px; } :where(.checkout-form-section, .checkout-summary-section) { padding-inline: 14px; } }
+@media (max-width: 360px) { :where(.container, .checkout-page .container) { padding-inline: 12px; } :where(.mobile-bottom-nav-item) { font-size: 9px; } }

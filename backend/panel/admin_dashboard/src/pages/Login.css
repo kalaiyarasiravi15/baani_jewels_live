@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@400;600;700&display=swap');
+
+/* ==========================================================================
+   BAANI JEWELS ADMIN LOGIN — EXACT IMAGE 3 SPLIT DESIGN (PROPER ICON PLACEMENT)
+   ========================================================================== */
+
+:root {
+  --thm-primary-color: #011c15;
+  --thm-secondary-color: #c89c4a;
+  --login-card-bg: #ffffff;
+  --login-input-bg: #eef3fc;
+}
+
+.login-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f5f4;
+  font-family: 'Poppins', sans-serif;
+  padding: 24px 20px;
+  box-sizing: border-box;
+}
+
+.login-split-card {
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  min-height: 520px;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   LEFT BRANDING PANEL
+   ========================================================================== */
+.login-left-panel {
+  flex: 1.1;
+  background: #011c15;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  position: relative;
+}
+
+.brand-logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-logo-img {
+  width: 170px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.login-logo-img:hover {
+  transform: scale(1.03);
+}
+
+.brand-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-subtitle {
+  color: #c89c4a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.brand-title {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.15;
+}
+
+.brand-description {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13.5px;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   RIGHT FORM PANEL
+   ========================================================================== */
+.login-right-panel {
+  flex: 0.9;
+  background-color: #ffffff;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.form-header {
+  margin-bottom: 28px;
+}
+
+.form-subtitle {
+  color: #011c15;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.form-title {
+  color: #011c15;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Clean Flexbox Input Groups (NEVER OVERLAPS TEXT WITH ICONS) ── */
+.input-group {
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  width: 100% !important;
+  background: #f8faf9 !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.input-group:focus-within {
+  border-color: #011c15 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(1, 28, 21, 0.1) !important;
+}
+
+/* Dedicated Icon Box on Left */
+.input-icon-box {
+  width: 46px !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  color: #011c15 !important;
+  font-size: 19px !important;
+}
+
+.input-icon-box svg,
+.input-icon {
+  font-size: 20px !important;
+  color: #011c15 !important;
+}
+
+/* Dedicated Input Field (No inner border, seamlessly integrated) */
+.login-field-input,
+.bj-login-input {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 48px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 14px 0 0 !important;
+  color: #011c15 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-family: 'Poppins', sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+.login-field-input::placeholder,
+.bj-login-input::placeholder {
+  color: #8b9ea8 !important;
+  font-weight: 400 !important;
+}
+
+/* Password Eye Toggle */
+.password-toggle {
+  width: 44px !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: none !important;
+  color: #7a8f87 !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  transition: color 0.2s ease !important;
+  outline: none !important;
+}
+
+.password-toggle:hover {
+  color: #011c15 !important;
+}
+
+/* Login Action Button (Dark Emerald like Image 3) */
+.login-action-btn {
+  width: 100% !important;
+  height: 48px !important;
+  background: #011c15 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  font-size: 14.5px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  transition: all 0.25s ease !important;
+  margin-top: 6px !important;
+  font-family: 'Poppins', sans-serif !important;
+  box-shadow: 0 4px 14px rgba(1, 28, 21, 0.25) !important;
+}
+
+.login-action-btn:hover:not(:disabled) {
+  background: #c89c4a !important;
+  color: #011c15 !important;
+  box-shadow: 0 6px 18px rgba(200, 156, 74, 0.4) !important;
+  transform: translateY(-1px) !important;
+}
+
+.login-action-btn:disabled {
+  opacity: 0.65 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+.btn-icon {
+  font-size: 19px !important;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 868px) {
+  .login-split-card {
+    flex-direction: column;
+    max-width: 460px;
+    min-height: auto;
+  }
+  
+  .login-left-panel {
+    padding: 38px 26px;
+    gap: 16px;
+  }
+
+  .login-logo-img {
+    width: 140px;
+  }
+
+  .brand-title {
+    font-size: 30px;
+  }
+
+  .login-right-panel {
+    padding: 38px 26px;
+  }
+
+  .form-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 16px;
+  }
+
+  .login-split-card {
+    border-radius: 12px;
+  }
+
+  .login-left-panel {
+    padding: 30px 18px;
+  }
+
+  .brand-title {
+    font-size: 26px;
+  }
+
+  .login-right-panel {
+    padding: 30px 18px;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+}

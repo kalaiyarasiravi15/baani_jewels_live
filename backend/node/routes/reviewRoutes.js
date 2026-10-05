@@ -1,0 +1,15 @@
+const router = require('express').Router();
+const ctrl = require('../controllers/reviewController');
+const { requireAdmin } = require('../utils/reviewAccess');
+const { reviewUpload } = require('../middleware/upload');
+router.get('/all', requireAdmin, ctrl.getAllReviews);
+router.put('/update/:id', requireAdmin, ctrl.updateReview);
+router.delete('/delete/:id', requireAdmin, ctrl.deleteReview);
+router.get('/product/:productId', ctrl.getPublishedReviewsByProduct);
+router.get('/order/:orderId', ctrl.getOrderReviews);
+router.get('/order/:orderId/product/:productId', ctrl.getReviewByOrderAndProduct);
+router.post('/order/:orderId/product/:productId', ctrl.authorizeOrder, reviewUpload, ctrl.saveCustomerReview);
+router.put('/order/:orderId/product/:productId', ctrl.authorizeOrder, reviewUpload, ctrl.saveCustomerReview);
+router.delete('/order/:orderId/product/:productId', ctrl.cancelCustomerReview);
+router.get('/:id', requireAdmin, ctrl.getParticularReview);
+module.exports = router;

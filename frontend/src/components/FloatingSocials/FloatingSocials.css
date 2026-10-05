@@ -1,0 +1,143 @@
+/* ==========================================================================
+   BAANI JEWELS FLOATING SOCIAL & QUICK CONTACT ICONS (DIRECT DISPLAY)
+   ========================================================================== */
+
+.floating-socials {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide when mobile navigation drawer is open */
+body.mobile-menu-open .floating-socials {
+  display: none !important;
+}
+
+/* Individual Social Button Base */
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff !important;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.social-btn:hover {
+  transform: scale(1.12) translateX(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  color: #ffffff !important;
+}
+
+.social-btn:active {
+  transform: scale(0.95);
+}
+
+/* Brand Colors & Gradients */
+.social-btn.whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.social-btn.phone {
+  background: linear-gradient(135deg, #dfb76c 0%, #c89c4a 100%);
+  color: #011c15 !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.social-btn.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.social-btn.facebook {
+  background: linear-gradient(135deg, #1877F2 0%, #0c56be 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Desktop Hover Tooltip (Appears to the left of the button) */
+@media (min-width: 901px) {
+  .social-btn::after {
+    content: attr(title);
+    position: absolute;
+    right: 56px;
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    background: #011c15;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(200, 156, 74, 0.35);
+  }
+
+  .social-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE CLEARANCE (ABOVE BOTTOM NAVIGATION BAR)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .floating-socials {
+    /* Sits cleanly 14px above the 62px bottom navigation bar */
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+    right: 14px;
+    gap: 8px;
+    z-index: 1250;
+  }
+
+  .social-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .social-btn::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-socials {
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    right: 10px;
+    gap: 7px;
+  }
+
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}

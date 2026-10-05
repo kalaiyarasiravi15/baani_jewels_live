@@ -1,0 +1,291 @@
+/* ── Home Collections Section ── */
+.hc-section {
+  width: 100%;
+  background: linear-gradient(180deg, #f7f3ea 0%, #f3ece0 100%);
+  padding: 24px 0 26px;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid rgba(200, 156, 74, 0.2);
+}
+
+.hc-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Header */
+.hc-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.hc-eyebrow {
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  color: var(--gold-deep, #b58739);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.hc-title {
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: clamp(26px, 3.2vw, 32px);
+  font-weight: 500;
+  color: var(--secondary-accent, #063b2e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.hc-title-accent {
+  color: var(--gold-deep, #b58739);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hc-sparkle {
+  color: var(--primary-accent, #c89c4a);
+  font-size: 0.75em;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
+/* Grid */
+.hc-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* Each Item */
+.hc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hc-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Circular Image */
+.hc-img-wrap {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(6, 59, 46, 0.12);
+  border: 4px solid #ffffff;
+  outline: 1.5px solid #ece5dc;
+  transition: outline-color 0.3s ease, box-shadow 0.3s ease;
+  background: #e5e7eb;
+}
+
+.hc-item:hover .hc-img-wrap {
+  outline-color: var(--primary-accent, #c89c4a);
+  box-shadow: 0 12px 30px rgba(200, 156, 74, 0.25);
+}
+
+.hc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hc-item:hover .hc-img {
+  transform: scale(1.08);
+}
+
+.hc-img-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(6, 59, 46, 0);
+  transition: background 0.3s ease;
+}
+
+.hc-item:hover .hc-img-overlay {
+  background: rgba(6, 59, 46, 0.1);
+}
+
+/* Name */
+.hc-name {
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--secondary-accent, #063b2e);
+  text-align: center;
+  transition: color 0.3s ease;
+  margin-top: 2px;
+}
+
+.hc-item:hover .hc-name {
+  color: var(--gold-deep, #b58739);
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS — Home Collections
+   Ordered largest → smallest: 1280, 1032, 991, 960, 768,
+   427, 417, 412, 375, 360
+   ══════════════════════════════════════════════════════════ */
+
+/* ── ≤1280px — large laptops ── */
+@media (max-width: 1280px) {
+  .hc-img-wrap {
+    width: 150px;
+    height: 150px;
+  }
+  .hc-grid {
+    gap: 28px;
+  }
+}
+
+/* ── ≤1032px — small laptops / large tablets ── */
+@media (max-width: 1032px) {
+  .hc-img-wrap {
+    width: 140px;
+    height: 140px;
+  }
+  .hc-grid {
+    gap: 26px;
+  }
+}
+
+/* ── ≤991px — tablets ── */
+@media (max-width: 991px) {
+  .hc-img-wrap {
+    width: 130px;
+    height: 130px;
+  }
+  .hc-grid {
+    gap: 24px;
+  }
+  .hc-name {
+    font-size: 12px;
+  }
+}
+
+/* ── ≤960px — small tablets ── */
+@media (max-width: 960px) {
+  .hc-img-wrap {
+    width: 125px;
+    height: 125px;
+  }
+  .hc-section {
+    padding: 32px 0 36px;
+  }
+}
+
+/* ── ≤768px — tablet portrait / mobile ── */
+@media (max-width: 768px) {
+  .hc-grid {
+    gap: 22px;
+  }
+
+  .hc-img-wrap {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hc-name {
+    font-size: 11px;
+  }
+
+  .hc-section {
+    padding: 40px 0 45px;
+  }
+}
+
+/* ── ≤427px — standard mobile ── */
+@media (max-width: 427px) {
+  .hc-grid {
+    gap: 16px;
+  }
+
+  .hc-img-wrap {
+    width: 92px;
+    height: 92px;
+    border-width: 3px;
+  }
+
+  .hc-name {
+    font-size: 9.5px;
+    letter-spacing: 1px;
+  }
+
+  .hc-title {
+    gap: 8px;
+  }
+}
+
+/* ── ≤417px — small mobile ── */
+@media (max-width: 417px) {
+  .hc-img-wrap {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+/* ── ≤412px — common Android width ── */
+@media (max-width: 412px) {
+  .hc-img-wrap {
+    width: 84px;
+    height: 84px;
+  }
+  .hc-section {
+    padding: 34px 0 38px;
+  }
+}
+
+/* ── ≤375px — iPhone SE / small iPhones ── */
+@media (max-width: 375px) {
+  .hc-grid {
+    gap: 14px;
+  }
+
+  .hc-img-wrap {
+    width: 78px;
+    height: 78px;
+  }
+
+  .hc-name {
+    font-size: 9px;
+  }
+}
+
+/* ── ≤360px — smallest common mobile width ── */
+@media (max-width: 360px) {
+  .hc-grid {
+    gap: 10px;
+  }
+
+  .hc-img-wrap {
+    width: 70px;
+    height: 70px;
+    border-width: 2.5px;
+  }
+
+  .hc-name {
+    font-size: 8.5px;
+    letter-spacing: 0.6px;
+  }
+
+  .hc-section {
+    padding: 28px 0 32px;
+  }
+}

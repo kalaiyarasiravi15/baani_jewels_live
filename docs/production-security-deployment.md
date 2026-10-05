@@ -1,0 +1,16 @@
+# Production handoff
+
+The code now uses database sessions, OTP challenges, preferences, payment intents and guest-order grants. No runtime browser-storage writes remain. The only local/session storage reads are a one-time verified import, and those keys are removed only after the server accepts their data. React component state is temporary memory; HttpOnly opaque cookies are still necessary to identify a visitor.
+
+Remote database migration and deployment are NOT completed. No remote server access or managed database credentials have been provided in this task. Existing connection settings and customer/order records have not been moved or erased. Do not change DB_HOST to an unverified destination or discard the existing database.
+
+Deployment steps:
+1. Identify the production database and hosting target. Take an encrypted provider-side snapshot of existing data, import it to the target, compare row counts/key relationships and retain rollback access.
+2. Create a dedicated non-root database account with a strong password. Restrict MySQL ingress to the API host/private network; enable provider TLS and automated encrypted backups. Application startup creates the new security tables (never sync alter/drop).
+3. Configure backend environment using backend/node/.env.production.example. The running server reads backend/node/.env and process environment; .env.production is a deployment source, not automatically selected. Do not commit real secrets. Set NODE_ENV=production and HTTPS origins before deployment. Cross-site domains require COOKIE_SAME_SITE=none and HTTPS; same-site subdomains use lax. Configure trust proxy only for a trusted proxy.
+4. Build/deploy storefront and admin together with the backend, so cookie/CSRF APIs and the browser import are available in one release. Existing valid login tokens may migrate until they expire; expired tokens require login. Existing guest order IDs alone grant no access. Old guests verify the order email; broken SMTP credentials must be corrected for that flow.
+5. Update/revoke existing default/compromised administrator and provider credentials through trusted account administration. The application no longer creates a default admin password or exposes public admin provisioning. Verify login, cart/wishlist persistence across devices, guest order OTP, review uploads and moderation after deployment.
+6. Files remain on the API server (or a future private object store), with database references and access checks on private review/contact files. Published catalog/review media is public by design. Include uploads in encrypted backups. New review filenames are prefixed so unapproved/orphan review uploads cannot be served publicly.
+7. Run npm run test:security and npm run test:reviews before release. Security integration tests use the configured MySQL connection, create uniquely named temporary test records and delete them; provider mail/SMS calls are mocked. Run them against a staging database, not a customer-facing production database. The rate limiter and OTP counters persist across restarts/workers.
+
+No claim of complete security or production deployment is made. Hosting firewall/TLS/backups and replacing rejected Razorpay/Gmail credentials are separate deployment requirements.

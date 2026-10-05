@@ -1,0 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@400;600;700&display=swap');
+:root {
+  --ars-dark: #111827;
+  --ars-teal: var(--thm-primary-color);
+  --ars-teal-light: rgba(1, 28, 21, 0.1);
+  --ars-gold: var(--thm-secondary-color);
+  --ars-bg: var(--bg-main, #fffaf4);
+  --white: #ffffff;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--ars-bg);
+  color: var(--ars-dark);
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --thm-font: 'Poppins', sans-serif;
+  --thm-font-2: 'Poppins', sans-serif;
+
+  /* Baani Jewels Royal Theme */
+  --thm-primary-color: #011c15;         /* Baani Navbar Dark Green */
+  --thm-primary-color-rgb: 1, 28, 21;
+  --thm-secondary-color: #c89c4a;       /* Metallic Gold */
+  --thm-secondary-color-rgb: 200, 156, 74;
+  --thm-body-font-color: #12382e;
+  --thm-body-font-size: 15px;
+  --thm-body-font-weight: 400;
+  --thm-body-line-height: 28px;
+  --thm-heading-font-color: #12382e;
+  --thm-white: #ffffff;
+  --thm-black: #12382e;
+  --thm-gray-bg: #fffaf4;               /* Light cream */
+  --thm-black-bg: #011c15;
+  --thm-border-color: #e5e7eb;
+  --thm-border-rgb-color: 1, 28, 21;
+  --thm-border-radius: 10px;
+
+  --bg-main: #fffaf4;                   /* Surface */
+  --sidebar-deep: #021f18;              /* Deep dark green sidebar */
+  --sidebar-teal: #011c15;              /* Sidebar base */
+  --accent-gold: #c89c4a;              /* Gold accent */
+  --accent-teal: #011c15;              /* Navbar dark green */
+  --accent-teal-light: rgba(200,156,74,0.12);
+  --text-dark: #12382e;
+  --text-muted: #53685f;
+  --white: #ffffff;
+  --border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--thm-font);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+.invalid-input {
+  border: 1.5px solid #ef4444 !important;
+  background-color: #fff8f8 !important;
+}
+.error-msg {
+  color: #dc2626 !important;
+  background-color: #fecaca !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  margin-top: 6px !important;
+  display: inline-block !important;
+  font-weight: 500 !important;
+  text-align: left !important;
+}
+
+
+/* Global Table Border Styles for Admin Panel */
+table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid #dee2e6 !important;
+  overflow: hidden !important;
+}
+table th, table td {
+  border-bottom: 1px solid #dee2e6 !important;
+  border-right: 1px solid #dee2e6 !important;
+}
+table th:last-child, table td:last-child {
+  border-right: none !important;
+}
+table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+table thead th {
+  background-color: #f1f3f5 !important;
+  border-bottom: 2px solid #dee2e6 !important;
+}
+
+/* ── Universal Standardized Admin Table Action Buttons (Matches BannerPage) ── */
+.pp-action-btns, .table-action-btns {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+.pp-act-btn, .btn-act-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  transition: all 0.15s ease !important;
+  flex-shrink: 0 !important;
+}
+.pp-act-btn.view, .btn-act-icon.view, .btn-act-view {
+  background: #e0f2fe !important;
+  color: #0284c7 !important;
+}
+.pp-act-btn.view:hover, .btn-act-icon.view:hover, .btn-act-view:hover {
+  background: #bae6fd !important;
+  color: #0369a1 !important;
+}
+.pp-act-btn.edit, .btn-act-icon.edit, .btn-act-edit {
+  background: #f3f4f6 !important;
+  color: #111111 !important;
+}
+.pp-act-btn.edit:hover, .btn-act-icon.edit:hover, .btn-act-edit:hover {
+  background: #e5e7eb !important;
+  color: #000000 !important;
+}
+.pp-act-btn.del, .btn-act-icon.del, .btn-act-del {
+  background: #fee2e2 !important;
+  color: #ef4444 !important;
+}
+.pp-act-btn.del:hover, .btn-act-icon.del:hover, .btn-act-del:hover {
+  background: #fecaca !important;
+  color: #dc2626 !important;
+}
+
