@@ -62,11 +62,11 @@ if (isLocalDev) {
     EMAIL_PASS: 'zojnfrfwbzipykdb',
     SUPPORT_PHONE: '+91 93453 22621',
     SUPPORT_EMAIL: 'Baanijewels.ind@gmail.com',
-    RAZORPAY_KEY: 'rzp_test_TBPx9EL1T1aqhC',
-    RAZORPAY_KEY_ID: 'rzp_test_TBPx9EL1T1aqhC',
-    RAZORPAY_SECRET: '93C5GlOnEIHr19OhtD960RLX',
-    RAZORPAY_KEY_SECRET: '93C5GlOnEIHr19OhtD960RLX',
-    VITE_RAZORPAY_KEY: 'rzp_test_TBPx9EL1T1aqhC'
+    RAZORPAY_KEY: 'rzp_live_TqR3Fw2vDINb1m',
+    RAZORPAY_KEY_ID: 'rzp_live_TqR3Fw2vDINb1m',
+    RAZORPAY_SECRET: 'aTmfJDIp8RvSVzaHIPO6gd5x',
+    RAZORPAY_KEY_SECRET: 'aTmfJDIp8RvSVzaHIPO6gd5x',
+    VITE_RAZORPAY_KEY: 'rzp_live_TqR3Fw2vDINb1m'
   };
 
   for (const [k, v] of Object.entries(WEBUZO_PRODUCTION_DEFAULTS)) {

@@ -214,7 +214,7 @@ const ADMIN_TOKEN = jwt.sign({ id: 1, role: 'admin' }, 'baani_jewels_secret_key_
       };
       this.on = function() {};
     };
-  }, '93C5GlOnEIHr19OhtD960RLX');
+  }, 'aTmfJDIp8RvSVzaHIPO6gd5x');
 
   // Submit Final Checkout
   console.log('Placing order with Instant Online Payment...');
