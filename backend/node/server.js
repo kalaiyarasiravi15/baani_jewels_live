@@ -8,7 +8,7 @@ const { sequelize } = require('./models/index');
 const app = express();
 if (process.env.TRUST_PROXY_HOPS) app.set('trust proxy', Number(process.env.TRUST_PROXY_HOPS));
 
-const allowedOrigins = [...new Set([process.env.FRONTEND_URL || 'https://baanijewels.com', process.env.ADMIN_URL || 'https://baanidashboard.baanijewels.com', 'https://www.baanijewels.com', 'https://baaniapi.baanijewels.com', ...(process.env.CORS_ORIGINS || '').split(',')].filter(Boolean).map(value => value.trim()))];
+const allowedOrigins = [...new Set([process.env.FRONTEND_URL || 'https://baanijewels.com', process.env.ADMIN_URL || 'https://baanidashboard.baanijewels.com', 'https://www.baanijewels.com', 'https://baanijewelsapi.com', 'https://baaniapi.baanijewels.com', ...(process.env.CORS_ORIGINS || '').split(',')].filter(Boolean).map(value => value.trim()))];
 if (process.env.NODE_ENV === 'production' && (!allowedOrigins.length || !process.env.JWT_SECRET)) throw new Error('Production origins and JWT_SECRET must be configured.');
 
 const isAllowedOrigin = (origin) => {

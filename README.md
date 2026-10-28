@@ -6,8 +6,8 @@ Production codebase for **Baani Jewels** featuring a modern customer storefront,
 
 - **Storefront (`frontend/`)**: React + Vite + Tailwind CSS e-commerce application (`https://baanijewels.com`).
 - **Admin Dashboard (`backend/panel/admin_dashboard/`)**: React + Vite management interface (`https://baanidashboard.baanijewels.com`).
-- **Backend API (`backend/node/`)**: Node.js + Express + MySQL/Sequelize REST API (`https://baaniapi.baanijewels.com`).
-- **Database Dump**: `DEPLOYMENT_PACKAGES/DATABASE_stsforce_baanidb.sql`
+- **Backend API (`backend/node/`)**: Node.js + Express + MySQL/Sequelize REST API (`https://baanijewelsapi.com`).
+- **Database Dump**: `DEPLOYMENT_PACKAGES/DATABASE_sts_baanijewels_db.sql`
 
 ## Quick Start
 

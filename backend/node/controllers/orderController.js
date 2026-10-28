@@ -147,7 +147,7 @@ const sendOrderNotificationEmail = async (orderData, statusOverride = null) => {
         const items = orderData.slots || orderData.items || [];
         let backendUrl = (process.env.BACKEND_URL || '').trim();
         if (!backendUrl || backendUrl.includes('localhost') || backendUrl.includes('127.0.0.1') || backendUrl.includes('172.16.') || backendUrl.includes('192.168.') || backendUrl.includes('10.')) {
-            backendUrl = 'https://baaniapi.baanijewels.com';
+            backendUrl = 'https://baanijewelsapi.com';
         }
         let frontendUrl = (process.env.FRONTEND_URL || '').trim();
         if (!frontendUrl || frontendUrl.includes('localhost') || frontendUrl.includes('127.0.0.1') || frontendUrl.includes('172.16.') || frontendUrl.includes('192.168.') || frontendUrl.includes('10.')) {

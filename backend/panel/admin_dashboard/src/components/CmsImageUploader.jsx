@@ -26,7 +26,7 @@ export const resolveCmsImage = (value) => {
   if (str.startsWith('/assests/') || str.startsWith('/assets/')) return str;
   if (str.startsWith('assests/') || str.startsWith('assets/')) return `/${str}`;
 
-  const fallbackImg = typeof window !== 'undefined' && window.location.hostname === 'localhost' ? 'http://localhost:8000/uploads/' : 'https://baaniapi.baanijewels.com/uploads/';
+  const fallbackImg = typeof window !== 'undefined' && window.location.hostname === 'localhost' ? 'http://localhost:8000/uploads/' : 'https://baanijewelsapi.com/uploads/';
   const baseUrl = (IMG || fallbackImg).replace(/\/$/, '');
   return `${baseUrl}/${clean}`;
 };

@@ -124,7 +124,7 @@ exports.sendMessage = async (req, res) => {
                             <tr style="border-bottom: 1px solid #f3f4f6;">
                                 <td style="padding: 10px 0; font-weight: 700; color: #12382e;">Design Photo:</td>
                                 <td style="padding: 10px 0; color: #111827;">
-                                    <a href="${(process.env.BACKEND_URL || 'https://baaniapi.baanijewels.com').replace(/\/$/, '')}/uploads/${uploadedImage}" target="_blank" style="color: #c9a84c; font-weight: 600;">
+                                    <a href="${(process.env.BACKEND_URL || 'https://baanijewelsapi.com').replace(/\/$/, '')}/uploads/${uploadedImage}" target="_blank" style="color: #c9a84c; font-weight: 600;">
                                         View Attached Image (${uploadedImage}) ↗
                                     </a>
                                 </td>

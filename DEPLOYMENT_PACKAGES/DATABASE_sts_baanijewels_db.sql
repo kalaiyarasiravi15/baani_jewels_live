@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: stsforce_baanidb
+-- Host: localhost    Database: sts_baanijewels_db
 -- ------------------------------------------------------
 -- Server version	10.4.32-MariaDB
 
@@ -16,12 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `stsforce_baanidb`
+-- Current Database: `sts_baanijewels_db`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `stsforce_baanidb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `sts_baanijewels_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
 
-USE `stsforce_baanidb`;
+USE `sts_baanijewels_db`;
 
 --
 -- Table structure for table `admins`

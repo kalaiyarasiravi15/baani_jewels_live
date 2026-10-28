@@ -2,9 +2,9 @@ const { Sequelize } = require('sequelize');
 const path = require('path');
 require('./envLoader');
 
-const DB_NAME = process.env.DB_NAME || 'stsforce_baanidb';
-const DB_USER = process.env.DB_USER || 'stsforce_baaniuser';
-const DB_PASSWORD = process.env.DB_PASSWORD !== undefined ? process.env.DB_PASSWORD : 'ypZm#vx0P&';
+const DB_NAME = process.env.DB_NAME || 'sts_baanijewels_db';
+const DB_USER = process.env.DB_USER || 'sts_baanijewelsuser';
+const DB_PASSWORD = process.env.DB_PASSWORD !== undefined ? process.env.DB_PASSWORD : 'me#8NizxCA';
 const DB_HOST = process.env.DB_HOST || 'localhost';
 const DB_PORT = process.env.DB_PORT || 3306;
 
