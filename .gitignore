@@ -24,6 +24,7 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 archive_unwanted_uploads/
+archive_product_images_backup/
 
 # IDE / Editor files
 .vscode/

@@ -137,7 +137,8 @@ Configured for:
 
 3. 3_BACKEND.zip
    - Complete Node.js Backend API fully bundled with node_modules/, all controllers,
-     models, routes, config, uploads/ product photos/banners, and production .env.
+     models, routes, config, empty uploads/ directory, and production .env.
+   - Clean, lightweight application package (pure backend engine without heavy media).
    - Entry points provided: "server.js" AND "app.js".
    - Scripts configured in package.json: "start", "serve", "app".
    - Pre-configured with database credentials (sts_baanijewelsuser / sts_baanijewels_db)
