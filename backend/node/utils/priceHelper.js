@@ -46,7 +46,8 @@ const formatProductWithDiscounts = (productJSON, context) => {
 
     const mrp = productJSON.mrpPrice !== null ? Number(productJSON.mrpPrice) : null;
     const dbSales = productJSON.salesPrice !== null ? Number(productJSON.salesPrice) : null;
-    const promotionBasePrice = mrp > 0 ? mrp : dbSales;
+    // Deal & offer discount applies against salesPrice (selling price); falls back to mrp if salesPrice is unavailable
+    const promotionBasePrice = (dbSales !== null && dbSales > 0) ? dbSales : (mrp > 0 ? mrp : 0);
     
     let salesPrice = dbSales !== null ? dbSales : mrp;
     let discountPercentage = 0;
@@ -122,7 +123,8 @@ const formatProductWithDiscounts = (productJSON, context) => {
             const vmrp = v.mrpPrice !== null ? Number(v.mrpPrice) : null;
             const vdbSales = v.salesPrice !== null ? Number(v.salesPrice) : null;
             let vsalesPrice = vdbSales !== null ? vdbSales : vmrp;
-            const variantPromotionBase = vmrp > 0 ? vmrp : vdbSales;
+            // Variant deal & offer discount applies against variant salesPrice
+            const variantPromotionBase = (vdbSales !== null && vdbSales > 0) ? vdbSales : (vmrp > 0 ? vmrp : 0);
 
             if (appliedDiscountSource && variantPromotionBase > 0) {
                 const result = calculateDiscount(variantPromotionBase, appliedDiscountType, appliedDiscountValue);

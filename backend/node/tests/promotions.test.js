@@ -70,8 +70,29 @@ test('variant prices and discounts come from the selected product only', async (
   const items = [{ productId: 1, quantity: 2 }];
   const result = await calculateServerOrderTotal(items, 0, null);
   assert.equal(items[0].variantId, 4);
-  assert.equal(result.totalAmount, 3000);
+  // 25% discount off variant salesPrice (1600) = 1200 each * 2 = 2400
+  assert.equal(result.totalAmount, 2400);
   await assert.rejects(calculateServerOrderTotal([{ productId: 1, variantId: 99, quantity: 1 }], 0, null), /variant/);
+});
+test('deal and offer discounts apply to salesPrice instead of mrpPrice', () => {
+  // 1. Percentage discount: 10% off salesPrice (800) = 720 (not 10% off mrpPrice 1000 = 900)
+  const deal10 = { targetType: 'PRODUCT', targetProductId: 1, discountType: 'PERCENTAGE', discountValue: 10 };
+  const formatted10 = formatProductWithDiscounts(products[1], { activeDeals: [deal10], activeOffers: [] });
+  assert.equal(formatted10.salesPrice, 720);
+  assert.equal(formatted10.mrpPrice, 1000);
+
+  // 2. Flat discount: Flat 100 off salesPrice (800) = 700 (not 1000 - 100 = 900)
+  const dealFlat = { targetType: 'PRODUCT', targetProductId: 1, discountType: 'FLAT', discountValue: 100 };
+  const formattedFlat = formatProductWithDiscounts(products[1], { activeDeals: [dealFlat], activeOffers: [] });
+  assert.equal(formattedFlat.salesPrice, 700);
+  assert.equal(formattedFlat.mrpPrice, 1000);
+
+  // 3. Fallback: If product has null salesPrice, fallback to mrpPrice
+  const productNoSales = { id: 2, status: true, name: 'Earrings', stock: 5, mrpPrice: 1000, salesPrice: null, variants: [] };
+  const dealFallback = { targetType: 'PRODUCT', targetProductId: 2, discountType: 'PERCENTAGE', discountValue: 10 };
+  const formattedFallback = formatProductWithDiscounts(productNoSales, { activeDeals: [dealFallback], activeOffers: [] });
+  assert.equal(formattedFallback.salesPrice, 900);
+  assert.equal(formattedFallback.mrpPrice, 1000);
 });
 test('invalid quantities, disabled products and malformed carts are rejected', async () => {
   for (const quantity of [-2, 0, 1.5, 1001, Infinity, undefined]) await assert.rejects(calculateServerOrderTotal([{ productId: 1, quantity }], 0, null));

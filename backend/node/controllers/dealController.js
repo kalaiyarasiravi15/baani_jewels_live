@@ -38,8 +38,9 @@ exports.getActiveDeal = async (req, res) => {
             const dealObj = d.toJSON();
             if (dealObj.targetProduct) {
                 const mrp = Number(dealObj.targetProduct.mrpPrice) || 0;
-                const dbSales = Number(dealObj.targetProduct.salesPrice) || mrp;
-                const basePrice = mrp > 0 ? mrp : dbSales;
+                const dbSales = Number(dealObj.targetProduct.salesPrice) || 0;
+                // Deal discount applies against salesPrice (selling price); falls back to mrp if salesPrice unavailable
+                const basePrice = dbSales > 0 ? dbSales : (mrp > 0 ? mrp : 0);
                 let dealPrice = basePrice;
                 const val = Number(dealObj.discountValue || dealObj.discountPercentage || 0);
 
