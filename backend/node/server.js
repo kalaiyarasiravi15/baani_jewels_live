@@ -87,7 +87,7 @@ app.use('/api/cancellations',    require('./routes/cancellationRoutes'));
 
 app.get('/', (req, res) => res.send('Baani Jewels API Running'));
 
-const PORT = process.env.PORT || 30019;
+const PORT = process.env.PORT || 30006;
 
 process.on('uncaughtException', (err) => {
     console.error('CRITICAL: Uncaught Exception:', err.message, err.stack);
