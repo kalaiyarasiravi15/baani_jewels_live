@@ -11,11 +11,11 @@ if (fs.existsSync(localEnvFile)) {
   } catch (_) {}
 }
 
-const isLocalDev = (process.env.PORT === '8000' || process.env.DB_USER === 'root') && process.env.NODE_ENV !== 'production';
+const isLocalDev = (process.env.PORT === '8000' || process.env.PORT === '8001' || process.env.DB_USER === 'root') && process.env.NODE_ENV !== 'production';
 
 if (isLocalDev) {
   // Preserve exact local development configuration
-  process.env.PORT = process.env.PORT || '8000';
+  process.env.PORT = process.env.PORT || '8001';
   process.env.DB_USER = process.env.DB_USER || 'root';
   process.env.DB_PASSWORD = process.env.DB_PASSWORD !== undefined ? process.env.DB_PASSWORD : '';
   process.env.DB_NAME = process.env.DB_NAME || 'baani_jewel_db';
