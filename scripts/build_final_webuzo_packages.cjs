@@ -79,6 +79,7 @@ async function buildPackages() {
     'app.js',
     'package.json',
     'package-lock.json',
+    '.htaccess',
     '.env.production',
     'env.production',
     'env.json'
